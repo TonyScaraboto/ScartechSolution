@@ -45,18 +45,6 @@ const projects = (await getCollection('work')).sort(
 			</div>
 		</section>
 
-		<!-- Projetos -->
-		<section class="projects-section">
-			<h2 class="section-title">Casos de Sucesso</h2>
-			<Grid variant="offset">
-				{projects.map((project) => (
-					<li>
-						<PortfolioPreview project={project} />
-					</li>
-				))}
-			</Grid>
-		</section>
-
 		<!-- Áreas de Atuação -->
 		<section class="areas-section">
 			<h2 class="section-title">Áreas de Atuação</h2>
