@@ -82,37 +82,6 @@ const projects = (await getCollection('work')).sort(
 			</div>
 		</section>
 
-		<!-- Depoimentos -->
-		<section class="testimonials-section">
-			<h2 class="section-title">O que nossos clientes dizem</h2>
-			<div class="testimonials-grid">
-				<div class="testimonial-card">
-					<div class="stars">⭐⭐⭐⭐⭐</div>
-					<p class="testimonial-text">"A automação de processos reduziu 85% do tempo que gastávamos com tarefas manuais. Agora nossa equipe foca no que realmente importa: crescimento."</p>
-					<div class="testimonial-author">
-						<strong>Carlos Silva</strong>
-						<span>Diretor Financeiro</span>
-					</div>
-				</div>
-				<div class="testimonial-card">
-					<div class="stars">⭐⭐⭐⭐⭐</div>
-					<p class="testimonial-text">"Depois da integração com os marketplaces, nossas vendas aumentaram 180%. O ROI foi alcançado em apenas 4 meses!"</p>
-					<div class="testimonial-author">
-						<strong>Mariana Costa</strong>
-						<span>Proprietária E-commerce</span>
-					</div>
-				</div>
-				<div class="testimonial-card">
-					<div class="stars">⭐⭐⭐⭐⭐</div>
-					<p class="testimonial-text">"O chatbot inteligente automatizou 80% do nosso atendimento. Satisfaction score subiu 45% e reduzimos custos significativamente."</p>
-					<div class="testimonial-author">
-						<strong>Roberto Mendes</strong>
-						<span>Gerente de Atendimento</span>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<ContactCTA />
 	</div>
 </BaseLayout>
@@ -260,62 +229,12 @@ const projects = (await getCollection('work')).sort(
 	padding: 0 1.5rem 1.5rem;
 }
 
-/* Testimonials */
-.testimonials-section {
-	max-width: 1400px;
-	margin: 4rem auto;
-	padding: 0 2rem;
-}
-
-.testimonials-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
-}
-
-.testimonial-card {
-	background: rgba(30, 41, 59, 0.5);
-	backdrop-filter: blur(10px);
-	padding: 2rem;
-	border-radius: 1rem;
-	border: 1px solid rgba(59, 130, 246, 0.2);
-}
-
-.stars {
-	font-size: 1.5rem;
-	margin-bottom: 1rem;
-}
-
-.testimonial-text {
-	color: #cbd5e1;
-	line-height: 1.7;
-	margin-bottom: 1.5rem;
-	font-style: italic;
-}
-
-.testimonial-author {
-	display: flex;
-	flex-direction: column;
-	gap: 0.3rem;
-}
-
-.testimonial-author strong {
-	color: #fff;
-	font-size: 1.1rem;
-}
-
-.testimonial-author span {
-	color: #94a3b8;
-	font-size: 0.9rem;
-}
-
 @media (max-width: 1024px) {
 	.impact-stats {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.areas-grid,
-	.testimonials-grid {
+	.areas-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
@@ -326,8 +245,7 @@ const projects = (await getCollection('work')).sort(
 	}
 
 	.impact-stats,
-	.areas-grid,
-	.testimonials-grid {
+	.areas-grid {
 		grid-template-columns: 1fr;
 	}
 }
