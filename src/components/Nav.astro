@@ -23,10 +23,10 @@ position: fixed;
 top: 0;
 left: 0;
 right: 0;
-background: rgba(0, 0, 0, 0.8);
+background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 58, 138, 0.9) 50%, rgba(37, 99, 235, 0.85) 100%);
 backdrop-filter: blur(20px);
-border-bottom: 1px solid rgba(37, 99, 235, 0.3);
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+border-bottom: 2px solid rgba(96, 165, 250, 0.4);
+box-shadow: 0 4px 30px rgba(37, 99, 235, 0.3), 0 0 15px rgba(59, 130, 246, 0.2);
 }
 
 .menu-header {
@@ -69,13 +69,14 @@ margin: 0 auto;
 
 .menu-links a {
   text-decoration: none;
-  color: #3b82f6;
+  color: #e0e7ff;
   font-weight: 600;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
   position: relative;
+  text-shadow: 0 0 10px rgba(147, 197, 253, 0.3);
 }
 
 .menu-links a::after {
@@ -91,8 +92,9 @@ margin: 0 auto;
 }
 
 .menu-links a:hover {
-  color: #60a5fa;
-  text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(147, 197, 253, 0.8), 0 0 25px rgba(96, 165, 250, 0.5);
+  background: rgba(59, 130, 246, 0.2);
 }
 
 .menu-links a:hover::after {
