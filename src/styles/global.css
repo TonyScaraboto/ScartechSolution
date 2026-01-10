@@ -128,6 +128,10 @@ body {
 	overflow-x: hidden;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: #000000;
 	background-image: 
@@ -145,8 +149,11 @@ body {
 	color: var(--gray-200);
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 	line-height: 1.5;
 	position: relative;
+	will-change: auto;
 }
 
 body::before {
@@ -215,10 +222,25 @@ body::after {
 img {
 	max-width: 100%;
 	height: auto;
+	content-visibility: auto;
+	loading: lazy;
 }
 
 a {
 	color: var(--link-color);
+	text-decoration-skip-ink: auto;
+}
+
+/* Performance otimizations */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 h1,
