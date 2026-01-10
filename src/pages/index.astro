@@ -302,15 +302,15 @@ import Icon from '../components/Icon.astro';
 
 /* Hero Section - Primeira Impressão */
 .hero-yup {
-  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
+  background: rgba(30, 41, 59, 0.6);
   backdrop-filter: blur(10px);
   border-radius: 2rem;
-  box-shadow: 0 20px 60px rgba(25, 118, 210, 0.08), 0 8px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   padding: 3rem 2rem;
   max-width: 680px;
   margin: 0 auto 5rem;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(59, 130, 246, 0.3);
   animation: fadeInUp 0.8s ease-out;
 }
 
@@ -330,10 +330,10 @@ import Icon from '../components/Icon.astro';
   height: 110px;
   border-radius: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
   object-fit: contain;
-  background: white;
+  background: rgba(30, 41, 59, 0.8);
   padding: 0.5rem;
 }
 
@@ -342,7 +342,7 @@ import Icon from '../components/Icon.astro';
 }
 
 .hero-title {
-  color: #0f172a;
+  color: #ffffff;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
   font-weight: 900;
   line-height: 1.2;
@@ -614,12 +614,13 @@ import Icon from '../components/Icon.astro';
 }
 
 .beneficio-card {
-  background: #ffffff;
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
   border-radius: 1.8rem;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   position: relative;
 }
 
@@ -682,12 +683,13 @@ import Icon from '../components/Icon.astro';
 }
 
 .servico-card {
-  background: #ffffff;
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(59, 130, 246, 0.2);
   position: relative;
 }
 
@@ -945,9 +947,9 @@ import Icon from '../components/Icon.astro';
 }
 
 .cta-btn.secondary {
-  background: #ffffff;
-  color: #2563eb;
-  border-color: #2563eb;
+  background: rgba(30, 41, 59, 0.8);
+  color: #93c5fd;
+  border-color: #3b82f6;
 }
 
 .cta-btn.secondary:hover {
