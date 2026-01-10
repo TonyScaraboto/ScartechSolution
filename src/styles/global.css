@@ -178,7 +178,7 @@ body::after {
 	opacity: 0.4;
 	pointer-events: none;
 	z-index: 1;
-	animation: twinkle 3s ease-in-out infinite;
+	animation: twinkle 4s ease-in-out infinite;
 }
 
 @keyframes galaxyMove {
@@ -187,8 +187,22 @@ body::after {
 }
 
 @keyframes twinkle {
-	0%, 100% { opacity: 0.3; }
-	50% { opacity: 0.6; }
+	0%, 100% { 
+		opacity: 0.3;
+		filter: brightness(1);
+	}
+	25% { 
+		opacity: 0.35;
+		filter: brightness(1.1);
+	}
+	50% { 
+		opacity: 0.4;
+		filter: brightness(1.2);
+	}
+	75% { 
+		opacity: 0.35;
+		filter: brightness(1.1);
+	}
 }
 
 *,
