@@ -315,3 +315,53 @@ h5 {
 		gap: 12rem;
 	}
 }
+
+/* View Transitions - Animações de Página */
+@view-transition {
+	navigation: auto;
+}
+
+/* Animação de fade suave */
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 0.4s;
+	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::view-transition-old(root) {
+	animation-name: fadeOut;
+}
+
+::view-transition-new(root) {
+	animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Animação especial para navegação */
+@media (prefers-reduced-motion: no-preference) {
+	::view-transition-group(root) {
+		animation-duration: 0.5s;
+		animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+	}
+}
