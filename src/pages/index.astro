@@ -1131,7 +1131,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         if (!ticking) {
           window.requestAnimationFrame(() => {
             const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero-yup');
+            const hero = document.querySelector('.hero-yup') as HTMLElement;
             if (hero && scrolled < window.innerHeight) {
               hero.style.transform = `translateY(${scrolled * 0.3}px)`;
               hero.style.opacity = `${1 - scrolled / 800}`;
