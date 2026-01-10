@@ -1109,6 +1109,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   // Observar todos os elementos com animação
   document.addEventListener('DOMContentLoaded', () => {
+    // Garantir que a página comece no topo
+    window.scrollTo(0, 0);
+    
+    // Prevenir scroll automático de navegadores
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
     const elements = document.querySelectorAll(
       '.section-title, .section-subtitle, .metodologia-step, .problem-card, .beneficio-card, .servico-card, .garantia-card, .metodologia-badge'
     );
