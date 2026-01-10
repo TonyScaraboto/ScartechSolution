@@ -129,11 +129,66 @@ body {
 }
 
 body {
-	background-color: var(--gray-999);
+	background: #000000;
+	background-image: 
+		radial-gradient(2px 2px at 20% 30%, white, transparent),
+		radial-gradient(2px 2px at 60% 70%, white, transparent),
+		radial-gradient(1px 1px at 50% 50%, white, transparent),
+		radial-gradient(1px 1px at 80% 10%, white, transparent),
+		radial-gradient(2px 2px at 90% 60%, white, transparent),
+		radial-gradient(1px 1px at 33% 80%, white, transparent),
+		radial-gradient(2px 2px at 15% 90%, white, transparent),
+		linear-gradient(to bottom, #000000 0%, #0a0a1a 50%, #000510 100%);
+	background-size: 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+	background-position: 0% 0%;
+	animation: galaxyMove 120s ease-in-out infinite;
 	color: var(--gray-200);
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
+	position: relative;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: 
+		radial-gradient(ellipse at top, rgba(29, 78, 216, 0.15), transparent 50%),
+		radial-gradient(ellipse at bottom, rgba(88, 28, 135, 0.15), transparent 50%);
+	pointer-events: none;
+	z-index: 1;
+}
+
+body::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: 
+		radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.8) 0.5px, transparent 1px),
+		radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.6) 0.5px, transparent 1px),
+		radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.4) 1px, transparent 2px);
+	background-size: 50px 50px, 80px 80px, 100px 100px;
+	opacity: 0.4;
+	pointer-events: none;
+	z-index: 1;
+	animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes galaxyMove {
+	0%, 100% { background-position: 0% 0%, 10% 20%, 30% 40%, 50% 60%, 70% 80%, 90% 100%, 100% 0%, 50% 50%; }
+	50% { background-position: 100% 100%, 90% 80%, 70% 60%, 50% 40%, 30% 20%, 10% 0%, 0% 100%, 50% 50%; }
+}
+
+@keyframes twinkle {
+	0%, 100% { opacity: 0.3; }
+	50% { opacity: 0.6; }
 }
 
 *,

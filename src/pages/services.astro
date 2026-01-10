@@ -1,415 +1,466 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Serviços | Scartech Solution" description="Conheça nossos serviços de automação e transformação digital">
-	<div class="services-wrapper">
-		<section class="services-hero">
-			<h1>Nossos Serviços</h1>
-			<p class="hero-subtitle">Soluções completas para transformar sua empresa digitalmente</p>
-		</section>
+<BaseLayout title="Serviços | Scartech Solution" description="Soluções completas em automação, desenvolvimento web e integração de sistemas">
+  <div class="services-container">
+    <!-- Hero Section -->
+    <section class="hero-services">
+      <h1 class="hero-title">Nossos <span class="highlight">Serviços</span></h1>
+      <p class="hero-subtitle">Soluções tecnológicas que transformam processos e impulsionam resultados</p>
+    </section>
 
-		<section class="services-grid">
-			<!-- Automação de Processos -->
-			<div class="service-card featured">
-				<div class="service-icon">🤖</div>
-				<h2>Automação de Processos (RPA)</h2>
-				<p class="service-description">
-					Transforme tarefas repetitivas em processos automatizados. Reduza tempo de execução em até 90% e elimine erros humanos.
-				</p>
-				<ul class="service-features">
-					<li>✓ Automação de planilhas e relatórios</li>
-					<li>✓ Integração de sistemas legados</li>
-					<li>✓ Processamento de dados em massa</li>
-					<li>✓ Workflows inteligentes</li>
-				</ul>
-				<div class="service-results">
-					<div class="result-item">
-						<span class="result-number">90%</span>
-						<span class="result-label">Redução de tempo</span>
-					</div>
-					<div class="result-item">
-						<span class="result-number">99%</span>
-						<span class="result-label">Precisão</span>
-					</div>
-				</div>
-			</div>
+    <!-- Serviços Grid -->
+    <section class="services-grid-section">
+      <div class="services-grid">
+        <!-- RPA - Automação -->
+        <div class="service-card">
+          <img 
+            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80" 
+            alt="Automação RPA"
+            class="service-image"
+          />
+          <div class="service-content">
+            <div class="service-icon">🤖</div>
+            <h3>RPA - Automação de Processos</h3>
+            <p>Elimine tarefas repetitivas e libere sua equipe para atividades estratégicas. Nossos robôs trabalham 24/7 com precisão total.</p>
+            <ul class="service-features">
+              <li>✓ Automação de planilhas e relatórios</li>
+              <li>✓ Integração entre sistemas</li>
+              <li>✓ Processamento de dados em massa</li>
+              <li>✓ Redução de 90% no tempo de execução</li>
+            </ul>
+            <div class="service-stats">
+              <span>Economia média: <strong>40% custos</strong></span>
+            </div>
+          </div>
+        </div>
 
-			<!-- Desenvolvimento Web -->
-			<div class="service-card">
-				<div class="service-icon">💻</div>
-				<h2>Desenvolvimento Web</h2>
-				<p class="service-description">
-					Sites e sistemas web modernos, responsivos e otimizados para conversão.
-				</p>
-				<ul class="service-features">
-					<li>✓ Landing pages de alta conversão</li>
-					<li>✓ Sistemas web personalizados</li>
-					<li>✓ E-commerce completo</li>
-					<li>✓ Dashboards e painéis administrativos</li>
-				</ul>
-				<div class="service-tech">
-					<span class="tech-badge">Astro</span>
-					<span class="tech-badge">React</span>
-					<span class="tech-badge">Node.js</span>
-				</div>
-			</div>
+        <!-- Desenvolvimento Web -->
+        <div class="service-card">
+          <img 
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" 
+            alt="Desenvolvimento Web"
+            class="service-image"
+          />
+          <div class="service-content">
+            <div class="service-icon">💻</div>
+            <h3>Desenvolvimento Web</h3>
+            <p>Sites, sistemas e aplicações web modernas, responsivas e otimizadas para conversão.</p>
+            <ul class="service-features">
+              <li>✓ Landing pages de alta conversão</li>
+              <li>✓ E-commerce completo</li>
+              <li>✓ Sistemas sob medida</li>
+              <li>✓ SEO e performance otimizados</li>
+            </ul>
+            <div class="service-stats">
+              <span>Aumento médio: <strong>+200% conversões</strong></span>
+            </div>
+          </div>
+        </div>
 
-			<!-- Integração de Sistemas -->
-			<div class="service-card">
-				<div class="service-icon">🔗</div>
-				<h2>Integração de Sistemas</h2>
-				<p class="service-description">
-					Conecte todas as suas ferramentas e sistemas em um ecossistema integrado.
-				</p>
-				<ul class="service-features">
-					<li>✓ APIs e Web Services</li>
-					<li>✓ Sincronização de dados</li>
-					<li>✓ CRM e ERP integrados</li>
-					<li>✓ Automação de marketing</li>
-				</ul>
-			</div>
+        <!-- Integração de Sistemas -->
+        <div class="service-card">
+          <img 
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" 
+            alt="Integração de Sistemas"
+            class="service-image"
+          />
+          <div class="service-content">
+            <div class="service-icon">🔗</div>
+            <h3>Integração de Sistemas</h3>
+            <p>Conecte todas as suas ferramentas e faça dados fluírem automaticamente entre plataformas.</p>
+            <ul class="service-features">
+              <li>✓ APIs e webhooks personalizados</li>
+              <li>✓ Sincronização em tempo real</li>
+              <li>✓ Migração de dados segura</li>
+              <li>✓ Eliminação de retrabalho manual</li>
+            </ul>
+            <div class="service-stats">
+              <span>Economia: <strong>-80% tempo de transferência</strong></span>
+            </div>
+          </div>
+        </div>
 
-			<!-- Chatbots e IA -->
-			<div class="service-card">
-				<div class="service-icon">💬</div>
-				<h2>Chatbots e Assistentes Virtuais</h2>
-				<p class="service-description">
-					Atendimento 24/7 com inteligência artificial para seus clientes.
-				</p>
-				<ul class="service-features">
-					<li>✓ WhatsApp Business automatizado</li>
-					<li>✓ Chat para site com IA</li>
-					<li>✓ Qualificação de leads</li>
-					<li>✓ Atendimento multicanal</li>
-				</ul>
-			</div>
+        <!-- Chatbots Inteligentes -->
+        <div class="service-card">
+          <img 
+            src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=80" 
+            alt="Chatbots"
+            class="service-image"
+          />
+          <div class="service-content">
+            <div class="service-icon">💬</div>
+            <h3>Chatbots Inteligentes</h3>
+            <p>Atendimento automatizado 24/7 que realmente entende e resolve problemas dos seus clientes.</p>
+            <ul class="service-features">
+              <li>✓ WhatsApp Business integrado</li>
+              <li>✓ Respostas personalizadas</li>
+              <li>✓ Qualificação de leads</li>
+              <li>✓ Integração com CRM</li>
+            </ul>
+            <div class="service-stats">
+              <span>Atendimento: <strong>+500% capacidade</strong></span>
+            </div>
+          </div>
+        </div>
 
-			<!-- Análise de Dados -->
-			<div class="service-card">
-				<div class="service-icon">📊</div>
-				<h2>Business Intelligence</h2>
-				<p class="service-description">
-					Transforme dados em insights acionáveis para tomada de decisão.
-				</p>
-				<ul class="service-features">
-					<li>✓ Dashboards personalizados</li>
-					<li>✓ Relatórios automatizados</li>
-					<li>✓ Análise preditiva</li>
-					<li>✓ KPIs em tempo real</li>
-				</ul>
-			</div>
+        <!-- Business Intelligence -->
+        <div class="service-card">
+          <img 
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
+            alt="Business Intelligence"
+            class="service-image"
+          />
+          <div class="service-content">
+            <div class="service-icon">📊</div>
+            <h3>Business Intelligence</h3>
+            <p>Dashboards e relatórios inteligentes que transformam dados em decisões estratégicas.</p>
+            <ul class="service-features">
+              <li>✓ Painéis em tempo real</li>
+              <li>✓ Análise preditiva</li>
+              <li>✓ KPIs personalizados</li>
+              <li>✓ Visualização de dados clara</li>
+            </ul>
+            <div class="service-stats">
+              <span>Decisões: <strong>3x mais rápidas</strong></span>
+            </div>
+          </div>
+        </div>
 
-			<!-- Consultoria Digital -->
-			<div class="service-card">
-				<div class="service-icon">🎯</div>
-				<h2>Consultoria em Transformação Digital</h2>
-				<p class="service-description">
-					Planejamento estratégico para digitalizar seu negócio de forma eficiente.
-				</p>
-				<ul class="service-features">
-					<li>✓ Diagnóstico de processos</li>
-					<li>✓ Roadmap de digitalização</li>
-					<li>✓ Design Thinking</li>
-					<li>✓ Treinamento de equipes</li>
-				</ul>
-			</div>
-		</section>
+        <!-- Consultoria -->
+        <div class="service-card">
+          <img 
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" 
+            alt="Consultoria"
+            class="service-image"
+          />
+          <div class="service-content">
+            <div class="service-icon">🎯</div>
+            <h3>Consultoria em Transformação Digital</h3>
+            <p>Mapeamento completo dos seus processos e plano estratégico de automação.</p>
+            <ul class="service-features">
+              <li>✓ Diagnóstico de processos</li>
+              <li>✓ Identificação de oportunidades</li>
+              <li>✓ Plano de implementação</li>
+              <li>✓ Acompanhamento de resultados</li>
+            </ul>
+            <div class="service-stats">
+              <span>ROI médio: <strong>400% em 1 ano</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Processo de Trabalho -->
-		<section class="work-process">
-			<h2>Como Trabalhamos</h2>
-			<div class="process-steps">
-				<div class="process-step">
-					<div class="step-number">1</div>
-					<h3>Diagnóstico</h3>
-					<p>Análise profunda dos seus processos e identificação de oportunidades</p>
-				</div>
-				<div class="process-step">
-					<div class="step-number">2</div>
-					<h3>Proposta</h3>
-					<p>Apresentação de solução personalizada com cronograma e investimento</p>
-				</div>
-				<div class="process-step">
-					<div class="step-number">3</div>
-					<h3>Desenvolvimento</h3>
-					<p>Criação da solução com acompanhamento e validações constantes</p>
-				</div>
-				<div class="process-step">
-					<div class="step-number">4</div>
-					<h3>Implementação</h3>
-					<p>Implantação gradual com treinamento da equipe</p>
-				</div>
-				<div class="process-step">
-					<div class="step-number">5</div>
-					<h3>Suporte</h3>
-					<p>Acompanhamento contínuo e melhorias baseadas em feedback</p>
-				</div>
-			</div>
-		</section>
+    <!-- Processo de Trabalho -->
+    <section class="process-section">
+      <h2 class="section-title">Como Trabalhamos</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Descoberta" class="process-img" />
+          <h3>Descoberta</h3>
+          <p>Entendemos profundamente seu negócio, processos e desafios</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Planejamento" class="process-img" />
+          <h3>Planejamento</h3>
+          <p>Criamos solução personalizada com cronograma e investimento claro</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Desenvolvimento" class="process-img" />
+          <h3>Desenvolvimento</h3>
+          <p>Implementamos a solução com entregas incrementais a cada 2 semanas</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Testes" class="process-img" />
+          <h3>Validação</h3>
+          <p>Testamos exaustivamente com dados reais e sua equipe</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">05</div>
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" alt="Entrega" class="process-img" />
+          <h3>Entrega & Suporte</h3>
+          <p>Implantamos, treinamos e acompanhamos resultados continuamente</p>
+        </div>
+      </div>
+    </section>
 
-		<!-- Garantias -->
-		<section class="garantias">
-			<h2>Nossas Garantias</h2>
-			<div class="garantias-grid">
-				<div class="garantia-item">
-					<div class="garantia-icon">✅</div>
-					<h3>Satisfação Garantida</h3>
-					<p>Se não ficar satisfeito, trabalhamos até acertar</p>
-				</div>
-				<div class="garantia-item">
-					<div class="garantia-icon">🔒</div>
-					<h3>Segurança Total</h3>
-					<p>Seus dados protegidos com criptografia e LGPD</p>
-				</div>
-				<div class="garantia-item">
-					<div class="garantia-icon">⚡</div>
-					<h3>Suporte Rápido</h3>
-					<p>Resposta em até 24h para qualquer questão</p>
-				</div>
-				<div class="garantia-item">
-					<div class="garantia-icon">📈</div>
-					<h3>ROI Comprovado</h3>
-					<p>Retorno sobre investimento medido e documentado</p>
-				</div>
-			</div>
-		</section>
+    <!-- Garantias -->
+    <section class="garantias-section">
+      <h2 class="section-title">Nossas Garantias</h2>
+      <div class="garantias-grid">
+        <div class="garantia-card">
+          <div class="garantia-icon">✅</div>
+          <h3>Resultados Comprovados</h3>
+          <p>Se não alcançarmos os resultados prometidos, trabalhamos até atingir ou devolvemos seu investimento.</p>
+        </div>
+        <div class="garantia-card">
+          <div class="garantia-icon">🔧</div>
+          <h3>Suporte Vitalício</h3>
+          <p>Todos os projetos incluem suporte técnico contínuo sem custo adicional.</p>
+        </div>
+        <div class="garantia-card">
+          <div class="garantia-icon">📈</div>
+          <h3>ROI Garantido</h3>
+          <p>Demonstramos retorno sobre investimento mensurável em até 6 meses.</p>
+        </div>
+        <div class="garantia-card">
+          <div class="garantia-icon">🛡️</div>
+          <h3>Segurança Total</h3>
+          <p>Seus dados protegidos com criptografia e conformidade com LGPD.</p>
+        </div>
+      </div>
+    </section>
 
-		<ContactCTA />
-	</div>
+    <ContactCTA />
+  </div>
 </BaseLayout>
 
 <style>
-	.services-wrapper {
-		max-width: 1400px;
-		margin: 0 auto;
-		padding: 2rem 1rem;
-	}
+.services-container {
+  position: relative;
+  z-index: 2;
+  padding-top: 5rem;
+}
 
-	.services-hero {
-		text-align: center;
-		padding: 4rem 2rem;
-		background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-		border-radius: 2rem;
-		color: white;
-		margin-bottom: 4rem;
-	}
+/* Hero */
+.hero-services {
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+  text-align: center;
+}
 
-	.services-hero h1 {
-		font-size: 3.5rem;
-		margin-bottom: 1rem;
-		font-weight: 900;
-	}
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
 
-	.hero-subtitle {
-		font-size: 1.3rem;
-		opacity: 0.95;
-	}
+.highlight {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
-	.services-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-		gap: 2rem;
-		margin-bottom: 5rem;
-	}
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: #94a3b8;
+}
 
-	.service-card {
-		background: white;
-		padding: 2.5rem;
-		border-radius: 1.5rem;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-		transition: all 0.3s ease;
-		border: 2px solid transparent;
-	}
+/* Services Grid */
+.services-grid-section {
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
 
-	.service-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-		border-color: #2563eb;
-	}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
 
-	.service-card.featured {
-		background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-		border: 2px solid #2563eb;
-	}
+.service-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-	.service-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-	}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+}
 
-	.service-card h2 {
-		font-size: 1.8rem;
-		margin-bottom: 1rem;
-		color: #1a202c;
-	}
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-	.service-description {
-		font-size: 1.1rem;
-		color: #4a5568;
-		margin-bottom: 1.5rem;
-		line-height: 1.6;
-	}
+.service-content {
+  padding: 2rem;
+}
 
-	.service-features {
-		list-style: none;
-		padding: 0;
-		margin-bottom: 1.5rem;
-	}
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-	.service-features li {
-		padding: 0.5rem 0;
-		color: #2d3748;
-		font-size: 1rem;
-	}
+.service-content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
 
-	.service-results {
-		display: flex;
-		gap: 2rem;
-		margin-top: 1.5rem;
-		padding-top: 1.5rem;
-		border-top: 2px solid rgba(102, 126, 234, 0.2);
-	}
+.service-content p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
 
-	.result-item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
 
-	.result-number {
-		font-size: 2.5rem;
-		font-weight: 900;
-		color: #2563eb;
-	}
+.service-features li {
+  color: #cbd5e1;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
 
-	.result-label {
-		font-size: 0.9rem;
-		color: #4a5568;
-	}
+.service-stats {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  color: #94a3b8;
+}
 
-	.service-tech {
-		display: flex;
-		gap: 0.5rem;
-		flex-wrap: wrap;
-		margin-top: 1rem;
-	}
+.service-stats strong {
+  color: #3b82f6;
+  font-weight: 700;
+}
 
-	.tech-badge {
-		background: #2563eb;
-		color: white;
-		padding: 0.4rem 0.8rem;
-		border-radius: 0.5rem;
-		font-size: 0.85rem;
-		font-weight: 600;
-	}
+/* Process Section */
+.process-section {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
 
-	.work-process {
-		text-align: center;
-		margin-bottom: 5rem;
-	}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 3rem;
+  text-align: center;
+}
 
-	.work-process h2 {
-		font-size: 2.5rem;
-		margin-bottom: 3rem;
-		color: #1a202c;
-	}
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
 
-	.process-steps {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 2rem;
-	}
+.process-step {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  text-align: center;
+  position: relative;
+}
 
-	.process-step {
-		background: white;
-		padding: 2rem;
-		border-radius: 1rem;
-		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-	}
+.step-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(59, 130, 246, 0.3);
+}
 
-	.step-number {
-		width: 60px;
-		height: 60px;
-		background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-		color: white;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 1.5rem;
-		font-weight: 900;
-		margin: 0 auto 1rem;
-	}
+.process-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
 
-	.process-step h3 {
-		font-size: 1.3rem;
-		margin-bottom: 0.5rem;
-		color: #1a202c;
-	}
+.process-step h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
 
-	.process-step p {
-		color: #4a5568;
-		font-size: 0.95rem;
-		line-height: 1.5;
-	}
+.process-step p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
 
-	.garantias {
-		text-align: center;
-		margin-bottom: 4rem;
-	}
+/* Garantias */
+.garantias-section {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
 
-	.garantias h2 {
-		font-size: 2.5rem;
-		margin-bottom: 3rem;
-		color: #1a202c;
-	}
+.garantias-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
 
-	.garantias-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
-	}
+.garantia-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
 
-	.garantia-item {
-		background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
-		padding: 2rem;
-		border-radius: 1rem;
-		box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
-	}
+.garantia-card:hover {
+  transform: translateY(-5px);
+}
 
-	.garantia-icon {
-		font-size: 2.5rem;
-		margin-bottom: 1rem;
-	}
+.garantia-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-	.garantia-item h3 {
-		font-size: 1.3rem;
-		margin-bottom: 0.5rem;
-		color: #1a202c;
-	}
+.garantia-card h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
 
-	.garantia-item p {
-		color: #4a5568;
-		font-size: 0.95rem;
-	}
+.garantia-card p {
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
 
-	@media (max-width: 768px) {
-		.services-hero h1 {
-			font-size: 2.5rem;
-		}
+/* Responsive */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 
-		.hero-subtitle {
-			font-size: 1.1rem;
-		}
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-		.services-grid {
-			grid-template-columns: 1fr;
-		}
+  .garantias-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-		.process-steps {
-			grid-template-columns: 1fr;
-		}
-	}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .process-grid,
+  .garantias-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>

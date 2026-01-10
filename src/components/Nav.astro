@@ -4,8 +4,7 @@
 <nav>
 <div class="menu-header">
 <a href="/" class="site-title">
-<img src="/logo.png" alt="Logo da empresa" class="logo-nav" />
-<span class="company-name">Scartech Solution</span>
+<span class="logo-s">S</span>
 </a>
 <div class="menu-links">
 <a href="/">Início</a>
@@ -20,34 +19,56 @@
 <style>
 nav {
 z-index: 9999;
-position: relative;
-margin-bottom: 2rem;
-background: rgba(0, 0, 0, 0.02);
-backdrop-filter: blur(10px);
-border-bottom: 1px solid rgba(232, 121, 249, 0.1);
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background: rgba(0, 0, 0, 0.8);
+backdrop-filter: blur(20px);
+border-bottom: 1px solid rgba(37, 99, 235, 0.3);
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .menu-header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 1.5rem 2rem;
+padding: 1rem 2rem;
 max-width: 1400px;
 margin: 0 auto;
 }
 
 .site-title {
   display: flex;
-  gap: 1rem;
   align-items: center;
   text-decoration: none;
-  font-weight: 900;
-  font-size: 1.8rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .site-title:hover {
-  transform: scale(1.02);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.logo-s {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #3b82f6, #2563eb, #1e40af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.8));
+  animation: logoGlow 3s ease-in-out infinite;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: -0.05em;
+}
+
+@keyframes logoGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 1)) drop-shadow(0 0 30px rgba(96, 165, 250, 0.8));
+  }
 }
 
 .menu-links {
@@ -58,7 +79,7 @@ margin: 0 auto;
 
 .menu-links a {
   text-decoration: none;
-  color: #2563eb;
+  color: #3b82f6;
   font-weight: 600;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -80,60 +101,19 @@ margin: 0 auto;
 }
 
 .menu-links a:hover {
-  color: #3b82f6;
+  color: #60a5fa;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
 }
 
 .menu-links a:hover::after {
   width: 80%;
 }
 
-.logo-nav {
-  height: 3.5em;
-  width: auto;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
-  object-fit: contain;
-}
-
-.logo-nav:hover {
-  transform: scale(1.05);
-}
-
-.company-name {
-  color: #2563eb;
-  letter-spacing: -0.02em;
-  font-weight: 900;
-  text-shadow: 
-    0 0 10px rgba(37, 99, 235, 0.9),
-    0 0 20px rgba(59, 130, 246, 0.7),
-    0 0 30px rgba(96, 165, 250, 0.5),
-    0 0 40px rgba(147, 197, 253, 0.3);
-  animation: neonGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes neonGlow {
-  from {
-    text-shadow: 
-      0 0 10px rgba(37, 99, 235, 0.9),
-      0 0 20px rgba(59, 130, 246, 0.7),
-      0 0 30px rgba(96, 165, 250, 0.5),
-      0 0 40px rgba(147, 197, 253, 0.3);
-  }
-  to {
-    text-shadow: 
-      0 0 20px rgba(37, 99, 235, 1),
-      0 0 30px rgba(59, 130, 246, 0.9),
-      0 0 40px rgba(96, 165, 250, 0.7),
-      0 0 50px rgba(147, 197, 253, 0.5),
-      0 0 60px rgba(59, 130, 246, 0.4);
-  }
-}
-
 @media (max-width: 768px) {
   .menu-header {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    padding: 1rem;
   }
   
   .menu-links {
@@ -145,6 +125,10 @@ margin: 0 auto;
   .menu-links a {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
+  }
+  
+  .logo-s {
+    font-size: 2.5rem;
   }
 }
 </style>
