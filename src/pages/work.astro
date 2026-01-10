@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import ContactCTA from '../components/ContactCTA.astro';
 import Grid from '../components/Grid.astro';
-import Hero from '../components/Hero.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -15,267 +14,334 @@ const projects = (await getCollection('work')).sort(
 	title="Portfólio | Scartech Solution"
 	description="Conheça nossos projetos de automação e transformação digital"
 >
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="Nosso Portfólio"
-				tagline="Projetos reais que transformaram negócios através da tecnologia e automação"
-				align="start"
-			/>
+	<div class="portfolio-container">
+		<!-- Hero -->
+		<section class="hero-portfolio">
+			<h1 class="hero-title">Nosso <span class="highlight">Portfólio</span></h1>
+			<p class="hero-subtitle">Projetos reais que transformaram negócios através da tecnologia</p>
+		</section>
 
-			<!-- Estatísticas de Impacto -->
-			<section class="impact-stats">
-				<div class="stat-card">
-					<div class="stat-number">90%</div>
-					<div class="stat-label">Redução de tempo em processos</div>
-				</div>
-				<div class="stat-card">
-					<div class="stat-number">40%</div>
-					<div class="stat-label">Redução de custos operacionais</div>
-				</div>
-				<div class="stat-card">
-					<div class="stat-number">100%</div>
-					<div class="stat-label">Satisfação dos clientes</div>
-				</div>
-				<div class="stat-card">
-					<div class="stat-number">24/7</div>
-					<div class="stat-label">Suporte contínuo</div>
-				</div>
-			</section>
+		<!-- Estatísticas de Impacto -->
+		<section class="impact-stats">
+			<div class="stat-card">
+				<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Performance" class="stat-img" />
+				<div class="stat-number">90%</div>
+				<div class="stat-label">Redução de tempo em processos</div>
+			</div>
+			<div class="stat-card">
+				<img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Custos" class="stat-img" />
+				<div class="stat-number">40%</div>
+				<div class="stat-label">Redução de custos operacionais</div>
+			</div>
+			<div class="stat-card">
+				<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Satisfação" class="stat-img" />
+				<div class="stat-number">100%</div>
+				<div class="stat-label">Satisfação dos clientes</div>
+			</div>
+			<div class="stat-card">
+				<img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="Suporte" class="stat-img" />
+				<div class="stat-number">24/7</div>
+				<div class="stat-label">Suporte contínuo</div>
+			</div>
+		</section>
 
+		<!-- Projetos -->
+		<section class="projects-section">
+			<h2 class="section-title">Casos de Sucesso</h2>
 			<Grid variant="offset">
-				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
-					))
-				}
+				{projects.map((project) => (
+					<li>
+						<PortfolioPreview project={project} />
+					</li>
+				))}
 			</Grid>
+		</section>
 
-			<!-- Casos de Uso -->
-			<section class="use-cases">
-				<h2>Áreas de Atuação</h2>
-				<div class="use-cases-grid">
-					<div class="use-case">
-						<div class="use-case-icon">🏢</div>
-						<h3>Empresas de Serviços</h3>
-						<p>Automação de processos administrativos, controle de estoque e gestão de clientes</p>
-					</div>
-					<div class="use-case">
-						<div class="use-case-icon">🏭</div>
-						<h3>Indústria</h3>
-						<p>Integração de sistemas, dashboards de produção e controle de qualidade</p>
-					</div>
-					<div class="use-case">
-						<div class="use-case-icon">🛒</div>
-						<h3>E-commerce</h3>
-						<p>Automação de vendas, chatbots e integração com marketplaces</p>
-					</div>
-					<div class="use-case">
-						<div class="use-case-icon">🏥</div>
-						<h3>Saúde</h3>
-						<p>Agendamento online, prontuários digitais e gestão de pacientes</p>
-					</div>
-					<div class="use-case">
-						<div class="use-case-icon">📚</div>
-						<h3>Educação</h3>
-						<p>Plataformas de ensino, gestão acadêmica e comunicação automatizada</p>
-					</div>
-					<div class="use-case">
-						<div class="use-case-icon">💼</div>
-						<h3>Consultoria</h3>
-						<p>CRM personalizado, automação de relatórios e dashboards de performance</p>
+		<!-- Áreas de Atuação -->
+		<section class="areas-section">
+			<h2 class="section-title">Áreas de Atuação</h2>
+			<div class="areas-grid">
+				<div class="area-card">
+					<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80" alt="RPA" class="area-img" />
+					<h3>Automação RPA</h3>
+					<p>Robôs que executam tarefas repetitivas com 100% de precisão</p>
+				</div>
+				<div class="area-card">
+					<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="E-commerce" class="area-img" />
+					<h3>E-commerce</h3>
+					<p>Lojas virtuais e integrações com marketplaces</p>
+				</div>
+				<div class="area-card">
+					<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1200&q=80" alt="Chatbots" class="area-img" />
+					<h3>Chatbots IA</h3>
+					<p>Atendimento automatizado inteligente 24/7</p>
+				</div>
+				<div class="area-card">
+					<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="BI" class="area-img" />
+					<h3>Business Intelligence</h3>
+					<p>Dashboards e análises de dados em tempo real</p>
+				</div>
+				<div class="area-card">
+					<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Integração" class="area-img" />
+					<h3>Integração de Sistemas</h3>
+					<p>Conectamos todas as suas ferramentas</p>
+				</div>
+				<div class="area-card">
+					<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Web" class="area-img" />
+					<h3>Desenvolvimento Web</h3>
+					<p>Sites e sistemas modernos e eficientes</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Depoimentos -->
+		<section class="testimonials-section">
+			<h2 class="section-title">O que nossos clientes dizem</h2>
+			<div class="testimonials-grid">
+				<div class="testimonial-card">
+					<div class="stars">⭐⭐⭐⭐⭐</div>
+					<p class="testimonial-text">"A automação de processos reduziu 85% do tempo que gastávamos com tarefas manuais. Agora nossa equipe foca no que realmente importa: crescimento."</p>
+					<div class="testimonial-author">
+						<strong>Carlos Silva</strong>
+						<span>Diretor Financeiro</span>
 					</div>
 				</div>
-			</section>
-
-			<!-- Depoimentos -->
-			<section class="testimonials">
-				<h2>O que nossos clientes dizem</h2>
-				<div class="testimonials-grid">
-					<div class="testimonial-card">
-						<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-						<p class="testimonial-text">"A automação de processos reduziu em 80% o tempo gasto com tarefas repetitivas. Nossa equipe agora foca no que realmente importa!"</p>
-						<div class="testimonial-author">
-							<strong>João Silva</strong>
-							<span>CEO - Tech Solutions</span>
-						</div>
-					</div>
-					<div class="testimonial-card">
-						<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-						<p class="testimonial-text">"O sistema web desenvolvido pela Scartech aumentou nossas vendas em 150%. Profissionais extremamente competentes!"</p>
-						<div class="testimonial-author">
-							<strong>Maria Santos</strong>
-							<span>Diretora - E-commerce Plus</span>
-						</div>
-					</div>
-					<div class="testimonial-card">
-						<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-						<p class="testimonial-text">"A integração dos sistemas transformou nossa operação. Dados em tempo real e decisões mais rápidas e assertivas."</p>
-						<div class="testimonial-author">
-							<strong>Pedro Costa</strong>
-							<span>Gerente de TI - Indústria XYZ</span>
-						</div>
+				<div class="testimonial-card">
+					<div class="stars">⭐⭐⭐⭐⭐</div>
+					<p class="testimonial-text">"Depois da integração com os marketplaces, nossas vendas aumentaram 180%. O ROI foi alcançado em apenas 4 meses!"</p>
+					<div class="testimonial-author">
+						<strong>Mariana Costa</strong>
+						<span>Proprietária E-commerce</span>
 					</div>
 				</div>
-			</section>
-		</main>
+				<div class="testimonial-card">
+					<div class="stars">⭐⭐⭐⭐⭐</div>
+					<p class="testimonial-text">"O chatbot inteligente automatizou 80% do nosso atendimento. Satisfaction score subiu 45% e reduzimos custos significativamente."</p>
+					<div class="testimonial-author">
+						<strong>Roberto Mendes</strong>
+						<span>Gerente de Atendimento</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<ContactCTA />
 	</div>
 </BaseLayout>
 
 <style>
+.portfolio-container {
+	position: relative;
+	z-index: 2;
+	padding-top: 5rem;
+}
+
+.hero-portfolio {
+	max-width: 1400px;
+	margin: 0 auto 4rem;
+	padding: 0 2rem;
+	text-align: center;
+}
+
+.hero-title {
+	font-size: 4rem;
+	font-weight: 900;
+	color: #fff;
+	margin-bottom: 1.5rem;
+}
+
+.highlight {
+	background: linear-gradient(135deg, #3b82f6, #2563eb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.hero-subtitle {
+	font-size: 1.4rem;
+	color: #94a3b8;
+}
+
+.section-title {
+	font-size: 2.5rem;
+	font-weight: 900;
+	color: #fff;
+	margin-bottom: 3rem;
+	text-align: center;
+}
+
+/* Stats */
+.impact-stats {
+	max-width: 1400px;
+	margin: 0 auto 4rem;
+	padding: 0 2rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
+
+.stat-card {
+	background: rgba(30, 41, 59, 0.5);
+	backdrop-filter: blur(10px);
+	padding: 2rem;
+	border-radius: 1rem;
+	border: 1px solid rgba(59, 130, 246, 0.2);
+	text-align: center;
+	transition: transform 0.3s ease;
+	overflow: hidden;
+	position: relative;
+}
+
+.stat-card:hover {
+	transform: translateY(-10px);
+}
+
+.stat-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.1;
+	z-index: -1;
+}
+
+.stat-number {
+	font-size: 3.5rem;
+	font-weight: 900;
+	background: linear-gradient(135deg, #3b82f6, #2563eb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	margin-bottom: 0.5rem;
+}
+
+.stat-label {
+	color: #cbd5e1;
+	font-size: 1rem;
+}
+
+/* Projects */
+.projects-section {
+	max-width: 1400px;
+	margin: 4rem auto;
+	padding: 0 2rem;
+}
+
+/* Areas */
+.areas-section {
+	max-width: 1400px;
+	margin: 4rem auto;
+	padding: 0 2rem;
+}
+
+.areas-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.area-card {
+	background: rgba(30, 41, 59, 0.5);
+	backdrop-filter: blur(10px);
+	border-radius: 1rem;
+	overflow: hidden;
+	border: 1px solid rgba(59, 130, 246, 0.2);
+	transition: transform 0.3s ease;
+}
+
+.area-card:hover {
+	transform: translateY(-10px);
+}
+
+.area-img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.area-card h3 {
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 1rem 1.5rem 0.5rem;
+}
+
+.area-card p {
+	color: #cbd5e1;
+	padding: 0 1.5rem 1.5rem;
+}
+
+/* Testimonials */
+.testimonials-section {
+	max-width: 1400px;
+	margin: 4rem auto;
+	padding: 0 2rem;
+}
+
+.testimonials-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.testimonial-card {
+	background: rgba(30, 41, 59, 0.5);
+	backdrop-filter: blur(10px);
+	padding: 2rem;
+	border-radius: 1rem;
+	border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.stars {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.testimonial-text {
+	color: #cbd5e1;
+	line-height: 1.7;
+	margin-bottom: 1.5rem;
+	font-style: italic;
+}
+
+.testimonial-author {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.testimonial-author strong {
+	color: #fff;
+	font-size: 1.1rem;
+}
+
+.testimonial-author span {
+	color: #94a3b8;
+	font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
 	.impact-stats {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 2rem;
-		margin: 3rem 0;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.stat-card {
-		background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-		padding: 2rem;
-		border-radius: 1rem;
-		text-align: center;
-		color: white;
-		box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-		transition: transform 0.3s ease;
-	}
-
-	.stat-card:hover {
-		transform: translateY(-5px);
-	}
-
-	.stat-number {
-		font-size: 3rem;
-		font-weight: 900;
-		margin-bottom: 0.5rem;
-		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	}
-
-	.stat-label {
-		font-size: 1rem;
-		opacity: 0.95;
-	}
-
-	.use-cases {
-		margin: 4rem 0;
-	}
-
-	.use-cases h2 {
-		text-align: center;
-		font-size: 2.5rem;
-		margin-bottom: 3rem;
-		color: var(--gray-0);
-	}
-
-	.use-cases-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 2rem;
-	}
-
-	.use-case {
-		background: white;
-		padding: 2rem;
-		border-radius: 1rem;
-		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-		transition: all 0.3s ease;
-		border: 2px solid transparent;
-	}
-
-	.use-case:hover {
-		transform: translateY(-5px);
-		border-color: #2563eb;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-	}
-
-	.use-case-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-	}
-
-	.use-case h3 {
-		font-size: 1.4rem;
-		margin-bottom: 0.8rem;
-		color: #1a202c;
-	}
-
-	.use-case p {
-		color: #4a5568;
-		line-height: 1.6;
-	}
-
-	.testimonials {
-		margin: 4rem 0;
-	}
-
-	.testimonials h2 {
-		text-align: center;
-		font-size: 2.5rem;
-		margin-bottom: 3rem;
-		color: var(--gray-0);
-	}
-
+	.areas-grid,
 	.testimonials-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.hero-title {
+		font-size: 2.5rem;
 	}
 
-	.testimonial-card {
-		background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
-		padding: 2.5rem;
-		border-radius: 1rem;
-		box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
-		position: relative;
+	.impact-stats,
+	.areas-grid,
+	.testimonials-grid {
+		grid-template-columns: 1fr;
 	}
-
-	.testimonial-stars {
-		font-size: 1.2rem;
-		margin-bottom: 1rem;
-	}
-
-	.testimonial-text {
-		font-size: 1.05rem;
-		line-height: 1.7;
-		color: #2d3748;
-		margin-bottom: 1.5rem;
-		font-style: italic;
-	}
-
-	.testimonial-author {
-		display: flex;
-		flex-direction: column;
-		gap: 0.3rem;
-		padding-top: 1rem;
-		border-top: 2px solid rgba(102, 126, 234, 0.2);
-	}
-
-	.testimonial-author strong {
-		color: #1a202c;
-		font-size: 1.1rem;
-	}
-
-	.testimonial-author span {
-		color: #2563eb;
-		font-size: 0.9rem;
-	}
-
-	@media (max-width: 768px) {
-		.impact-stats {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		.stat-number {
-			font-size: 2.5rem;
-		}
-
-		.use-cases-grid,
-		.testimonials-grid {
-			grid-template-columns: 1fr;
-		}
-	}
+}
 </style>
 
