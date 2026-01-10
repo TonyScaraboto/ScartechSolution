@@ -1010,4 +1010,129 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 }
 
 @media (max-width: 480px) {
+}
+
+/* Animações de Scroll Reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animações escalonadas para cards */
+.metodologia-step,
+.problem-card,
+.beneficio-card,
+.servico-card,
+.garantia-card {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.metodologia-step.revealed,
+.problem-card.revealed,
+.beneficio-card.revealed,
+.servico-card.revealed,
+.garantia-card.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Delay escalonado */
+.metodologia-step:nth-child(1).revealed { transition-delay: 0.1s; }
+.metodologia-step:nth-child(2).revealed { transition-delay: 0.2s; }
+.metodologia-step:nth-child(3).revealed { transition-delay: 0.3s; }
+.metodologia-step:nth-child(4).revealed { transition-delay: 0.4s; }
+.metodologia-step:nth-child(5).revealed { transition-delay: 0.5s; }
+
+.problem-card:nth-child(1).revealed { transition-delay: 0.1s; }
+.problem-card:nth-child(2).revealed { transition-delay: 0.2s; }
+.problem-card:nth-child(3).revealed { transition-delay: 0.3s; }
+
+.beneficio-card:nth-child(1).revealed { transition-delay: 0.15s; }
+.beneficio-card:nth-child(2).revealed { transition-delay: 0.3s; }
+.beneficio-card:nth-child(3).revealed { transition-delay: 0.45s; }
+
+.servico-card:nth-child(1).revealed { transition-delay: 0.1s; }
+.servico-card:nth-child(2).revealed { transition-delay: 0.15s; }
+.servico-card:nth-child(3).revealed { transition-delay: 0.2s; }
+.servico-card:nth-child(4).revealed { transition-delay: 0.25s; }
+.servico-card:nth-child(5).revealed { transition-delay: 0.3s; }
+.servico-card:nth-child(6).revealed { transition-delay: 0.35s; }
+
+/* Animação de títulos */
+.section-title,
+.section-subtitle {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s,
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.section-title.revealed,
+.section-subtitle.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Parallax suave */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-yup {
+    transform: translateY(0);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
 </style>
+
+<script>
+  // Intersection Observer para animações de scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, observerOptions);
+
+  // Observar todos os elementos com animação
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll(
+      '.section-title, .section-subtitle, .metodologia-step, .problem-card, .beneficio-card, .servico-card, .garantia-card, .metodologia-badge'
+    );
+    
+    elements.forEach(el => observer.observe(el));
+
+    // Parallax suave no scroll
+    if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+      let ticking = false;
+      
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-yup');
+            if (hero && scrolled < window.innerHeight) {
+              hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+              hero.style.opacity = `${1 - scrolled / 800}`;
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    }
+  });
+</script>
