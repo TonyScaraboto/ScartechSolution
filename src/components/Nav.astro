@@ -4,6 +4,7 @@
 <nav>
 <div class="menu-header">
 <a href="/" class="site-title">
+<img src="/logo2.png" alt="Logo" class="logo-image" />
 <span class="logo-text">Scartech <span class="logo-highlight">Solution</span></span>
 </a>
 <div class="menu-links">
@@ -41,12 +42,25 @@ margin: 0 auto;
 .site-title {
   display: flex;
   align-items: center;
+  gap: 1rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .site-title:hover {
   transform: translateY(-2px);
+}
+
+.logo-image {
+  height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.4));
+  transition: filter 0.3s ease;
+}
+
+.site-title:hover .logo-image {
+  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
 }
 
 .logo-text {

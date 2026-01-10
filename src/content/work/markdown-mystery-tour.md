@@ -76,16 +76,16 @@ Desenvolvemos um chatbot inteligente integrado ao WhatsApp Business com múltipl
 ### Métricas Impressionantes
 
 **Eficiência:**
-- 🤖 **80% de atendimentos** resolvidos automaticamente
-- ⚡ **Resposta instantânea** (antes: 4 horas)
-- 🌙 **50+ agendamentos** realizados fora do horário comercial
-- 📊 **92% de precisão** nas respostas do bot
+- **80% de atendimentos** resolvidos automaticamente
+- **Resposta instantânea** (antes: 4 horas)
+- **50+ agendamentos** realizados fora do horário comercial
+- **92% de precisão** nas respostas do bot
 
 **Impacto no Negócio:**
-- 💰 **35% de aumento** em novos agendamentos
-- ⭐ **45% de melhora** na satisfação dos pacientes
-- 👥 **60% de redução** na carga da equipe de atendimento
-- 💵 **ROI em 3 meses**
+- **35% de aumento** em novos agendamentos
+- **45% de melhora** na satisfação dos pacientes
+- **60% de redução** na carga da equipe de atendimento
+- **ROI em 3 meses**
 
 **Satisfação:**
 - 4.8/5 avaliação média do atendimento
