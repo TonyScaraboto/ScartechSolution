@@ -12,16 +12,37 @@ const projects = (await getCollection('work')).sort(
 ---
 
 <BaseLayout
-	title="My Work | Jeanine White"
-	description="Learn about Jeanine White's most recent projects"
+	title="Portfólio | Scartech Solution"
+	description="Conheça nossos projetos de automação e transformação digital"
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="My Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
+				title="Nosso Portfólio"
+				tagline="Projetos reais que transformaram negócios através da tecnologia e automação"
 				align="start"
 			/>
+
+			<!-- Estatísticas de Impacto -->
+			<section class="impact-stats">
+				<div class="stat-card">
+					<div class="stat-number">90%</div>
+					<div class="stat-label">Redução de tempo em processos</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-number">40%</div>
+					<div class="stat-label">Redução de custos operacionais</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-number">100%</div>
+					<div class="stat-label">Satisfação dos clientes</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-number">24/7</div>
+					<div class="stat-label">Suporte contínuo</div>
+				</div>
+			</section>
+
 			<Grid variant="offset">
 				{
 					projects.map((project) => (
@@ -31,7 +52,230 @@ const projects = (await getCollection('work')).sort(
 					))
 				}
 			</Grid>
+
+			<!-- Casos de Uso -->
+			<section class="use-cases">
+				<h2>Áreas de Atuação</h2>
+				<div class="use-cases-grid">
+					<div class="use-case">
+						<div class="use-case-icon">🏢</div>
+						<h3>Empresas de Serviços</h3>
+						<p>Automação de processos administrativos, controle de estoque e gestão de clientes</p>
+					</div>
+					<div class="use-case">
+						<div class="use-case-icon">🏭</div>
+						<h3>Indústria</h3>
+						<p>Integração de sistemas, dashboards de produção e controle de qualidade</p>
+					</div>
+					<div class="use-case">
+						<div class="use-case-icon">🛒</div>
+						<h3>E-commerce</h3>
+						<p>Automação de vendas, chatbots e integração com marketplaces</p>
+					</div>
+					<div class="use-case">
+						<div class="use-case-icon">🏥</div>
+						<h3>Saúde</h3>
+						<p>Agendamento online, prontuários digitais e gestão de pacientes</p>
+					</div>
+					<div class="use-case">
+						<div class="use-case-icon">📚</div>
+						<h3>Educação</h3>
+						<p>Plataformas de ensino, gestão acadêmica e comunicação automatizada</p>
+					</div>
+					<div class="use-case">
+						<div class="use-case-icon">💼</div>
+						<h3>Consultoria</h3>
+						<p>CRM personalizado, automação de relatórios e dashboards de performance</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Depoimentos -->
+			<section class="testimonials">
+				<h2>O que nossos clientes dizem</h2>
+				<div class="testimonials-grid">
+					<div class="testimonial-card">
+						<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+						<p class="testimonial-text">"A automação de processos reduziu em 80% o tempo gasto com tarefas repetitivas. Nossa equipe agora foca no que realmente importa!"</p>
+						<div class="testimonial-author">
+							<strong>João Silva</strong>
+							<span>CEO - Tech Solutions</span>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+						<p class="testimonial-text">"O sistema web desenvolvido pela Scartech aumentou nossas vendas em 150%. Profissionais extremamente competentes!"</p>
+						<div class="testimonial-author">
+							<strong>Maria Santos</strong>
+							<span>Diretora - E-commerce Plus</span>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+						<p class="testimonial-text">"A integração dos sistemas transformou nossa operação. Dados em tempo real e decisões mais rápidas e assertivas."</p>
+						<div class="testimonial-author">
+							<strong>Pedro Costa</strong>
+							<span>Gerente de TI - Indústria XYZ</span>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<ContactCTA />
 	</div>
 </BaseLayout>
+
+<style>
+	.impact-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin: 3rem 0;
+	}
+
+	.stat-card {
+		background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+		padding: 2rem;
+		border-radius: 1rem;
+		text-align: center;
+		color: white;
+		box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+		transition: transform 0.3s ease;
+	}
+
+	.stat-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.stat-number {
+		font-size: 3rem;
+		font-weight: 900;
+		margin-bottom: 0.5rem;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	.stat-label {
+		font-size: 1rem;
+		opacity: 0.95;
+	}
+
+	.use-cases {
+		margin: 4rem 0;
+	}
+
+	.use-cases h2 {
+		text-align: center;
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+		color: var(--gray-0);
+	}
+
+	.use-cases-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.use-case {
+		background: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+
+	.use-case:hover {
+		transform: translateY(-5px);
+		border-color: #2563eb;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+	}
+
+	.use-case-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.use-case h3 {
+		font-size: 1.4rem;
+		margin-bottom: 0.8rem;
+		color: #1a202c;
+	}
+
+	.use-case p {
+		color: #4a5568;
+		line-height: 1.6;
+	}
+
+	.testimonials {
+		margin: 4rem 0;
+	}
+
+	.testimonials h2 {
+		text-align: center;
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+		color: var(--gray-0);
+	}
+
+	.testimonials-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.testimonial-card {
+		background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+		padding: 2.5rem;
+		border-radius: 1rem;
+		box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+		position: relative;
+	}
+
+	.testimonial-stars {
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+	}
+
+	.testimonial-text {
+		font-size: 1.05rem;
+		line-height: 1.7;
+		color: #2d3748;
+		margin-bottom: 1.5rem;
+		font-style: italic;
+	}
+
+	.testimonial-author {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+		padding-top: 1rem;
+		border-top: 2px solid rgba(102, 126, 234, 0.2);
+	}
+
+	.testimonial-author strong {
+		color: #1a202c;
+		font-size: 1.1rem;
+	}
+
+	.testimonial-author span {
+		color: #2563eb;
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 768px) {
+		.impact-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.stat-number {
+			font-size: 2.5rem;
+		}
+
+		.use-cases-grid,
+		.testimonials-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
+

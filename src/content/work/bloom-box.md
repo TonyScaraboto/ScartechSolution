@@ -1,23 +1,66 @@
 ---
-title: Bloom Box
-publishDate: 2019-12-01 00:00:00
+title: Automação de Processos Financeiros
+publishDate: 2024-06-15 00:00:00
 img: /assets/stock-2.jpg
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img_alt: Gráficos e dashboards financeiros em tela de computador
 description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
+  Desenvolvemos um sistema de automação que reduziu em 85% o tempo de processamento
+  de faturas e relatórios financeiros de uma empresa de serviços.
 tags:
-  - Dev
-  - Branding
-  - Backend
+  - Automação
+  - RPA
+  - Business Intelligence
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+## O Desafio
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+Uma empresa de consultoria enfrentava um grande gargalo: sua equipe financeira gastava mais de 40 horas por semana processando manualmente faturas, gerando relatórios e fazendo conciliações bancárias. Esse processo manual não só consumia tempo valioso, como também estava sujeito a erros humanos que custavam caro.
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+**Principais dores identificadas:**
+- Processamento manual de 200+ faturas mensais
+- Geração de relatórios financeiros levava 8 horas por semana
+- Erros em 15% das conciliações bancárias
+- Falta de visibilidade em tempo real sobre o fluxo de caixa
+- Equipe sobrecarregada com tarefas repetitivas
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## A Solução
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+Desenvolvemos um sistema completo de automação usando RPA (Robotic Process Automation) integrado com Business Intelligence:
+
+**1. Automação de Processamento de Faturas**
+- Extração automática de dados de PDFs e e-mails
+- Validação e categorização inteligente
+- Lançamento automático no sistema ERP
+- Notificações automáticas para aprovações
+
+**2. Relatórios Automatizados**
+- Geração automática de relatórios financeiros diários
+- Dashboard em tempo real com KPIs principais
+- Alertas automáticos para anomalias
+- Exportação programada para diferentes formatos
+
+**3. Conciliação Bancária Inteligente**
+- Integração direta com APIs bancárias
+- Matching automático de transações
+- Identificação de divergências
+- Relatórios de exceções para revisão manual
+
+## Resultados Alcançados
+
+**Métricas de Sucesso:**
+- ✅ **85% de redução** no tempo de processamento
+- ✅ **99% de precisão** nas conciliações
+- ✅ **40 horas/semana** economizadas
+- ✅ **ROI em 4 meses** - investimento recuperado rapidamente
+- ✅ **100% de satisfação** da equipe financeira
+
+**Impacto no Negócio:**
+A equipe financeira agora dedica o tempo economizado para análises estratégicas e planejamento, ao invés de tarefas operacionais. O CEO relatou: "Transformou completamente nossa operação financeira. Agora temos dados em tempo real e nossa equipe foca no que realmente importa."
+
+## Tecnologias Utilizadas
+
+- **RPA:** UiPath para automação de processos
+- **BI:** Power BI para dashboards e relatórios
+- **Integrações:** APIs REST para conexão com bancos e ERP
+- **Cloud:** Azure para hospedagem e processamento
+- **AI:** Machine Learning para categorização inteligente

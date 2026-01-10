@@ -7,6 +7,13 @@
 <img src="/logo.png" alt="Logo da empresa" class="logo-nav" />
 <span class="company-name">Scartech Solution</span>
 </a>
+<div class="menu-links">
+<a href="/">Início</a>
+<a href="/about">Sobre</a>
+<a href="/services">Serviços</a>
+<a href="/work">Portfólio</a>
+<a href="/contact">Contato</a>
+</div>
 </div>
 </nav>
 
@@ -15,12 +22,18 @@ nav {
 z-index: 9999;
 position: relative;
 margin-bottom: 2rem;
+background: rgba(0, 0, 0, 0.02);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(232, 121, 249, 0.1);
 }
 
 .menu-header {
 display: flex;
-justify-content: center;
-padding: 1.5rem;
+justify-content: space-between;
+align-items: center;
+padding: 1.5rem 2rem;
+max-width: 1400px;
+margin: 0 auto;
 }
 
 .site-title {
@@ -37,6 +50,43 @@ padding: 1.5rem;
   transform: scale(1.02);
 }
 
+.menu-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  transition: width 0.3s ease;
+}
+
+.menu-links a:hover {
+  color: #3b82f6;
+}
+
+.menu-links a:hover::after {
+  width: 80%;
+}
+
 .logo-nav {
   height: 3.5em;
   width: auto;
@@ -51,32 +101,50 @@ padding: 1.5rem;
 }
 
 .company-name {
-  color: #e879f9;
+  color: #2563eb;
   letter-spacing: -0.02em;
   font-weight: 900;
   text-shadow: 
-    0 0 10px rgba(232, 121, 249, 0.9),
-    0 0 20px rgba(217, 70, 239, 0.7),
-    0 0 30px rgba(168, 85, 247, 0.5),
-    0 0 40px rgba(168, 85, 247, 0.3);
+    0 0 10px rgba(37, 99, 235, 0.9),
+    0 0 20px rgba(59, 130, 246, 0.7),
+    0 0 30px rgba(96, 165, 250, 0.5),
+    0 0 40px rgba(147, 197, 253, 0.3);
   animation: neonGlow 2s ease-in-out infinite alternate;
 }
 
 @keyframes neonGlow {
   from {
     text-shadow: 
-      0 0 10px rgba(232, 121, 249, 0.9),
-      0 0 20px rgba(217, 70, 239, 0.7),
-      0 0 30px rgba(168, 85, 247, 0.5),
-      0 0 40px rgba(168, 85, 247, 0.3);
+      0 0 10px rgba(37, 99, 235, 0.9),
+      0 0 20px rgba(59, 130, 246, 0.7),
+      0 0 30px rgba(96, 165, 250, 0.5),
+      0 0 40px rgba(147, 197, 253, 0.3);
   }
   to {
     text-shadow: 
-      0 0 20px rgba(232, 121, 249, 1),
-      0 0 30px rgba(217, 70, 239, 0.9),
-      0 0 40px rgba(168, 85, 247, 0.7),
-      0 0 50px rgba(168, 85, 247, 0.5),
-      0 0 60px rgba(236, 72, 153, 0.4);
+      0 0 20px rgba(37, 99, 235, 1),
+      0 0 30px rgba(59, 130, 246, 0.9),
+      0 0 40px rgba(96, 165, 250, 0.7),
+      0 0 50px rgba(147, 197, 253, 0.5),
+      0 0 60px rgba(59, 130, 246, 0.4);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .menu-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .menu-links a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 </style>
