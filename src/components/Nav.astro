@@ -4,7 +4,7 @@
 <nav>
 <div class="menu-header">
 <a href="/" class="site-title">
-<img src="/logo2.png" alt="Logo Scartech Solution" class="logo-nav" />
+<span class="logo-text">Scartech <span class="logo-highlight">Solution</span></span>
 </a>
 <div class="menu-links">
 <a href="/">Início</a>
@@ -42,23 +42,33 @@ margin: 0 auto;
   display: flex;
   align-items: center;
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .site-title:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
 }
 
-.logo-nav {
-  height: 3rem;
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.5));
-  transition: filter 0.3s ease;
+.logo-text {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
 }
 
-.logo-nav:hover {
-  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.8));
+.logo-highlight {
+  background: linear-gradient(135deg, #3b82f6, #2563eb, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.site-title:hover .logo-text {
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 15px rgba(147, 197, 253, 0.4);
 }
 
 .menu-links {
@@ -121,8 +131,8 @@ margin: 0 auto;
     padding: 0.4rem 0.8rem;
   }
   
-  .logo-nav {
-    height: 2.5rem;
+  .logo-text {
+    font-size: 1.4rem;
   }
 }
 </style>
