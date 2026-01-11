@@ -1,12 +1,17 @@
 ---
 ---
 
-<nav>
+<nav data-nav-root>
 <div class="menu-header">
 <a href="/" class="site-title">
 <img src="/logo2.png" alt="Logo" class="logo-image" />
 <span class="logo-text">Scartech <span class="logo-highlight">Solution</span></span>
 </a>
+<button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+<span class="menu-bar"></span>
+<span class="menu-bar"></span>
+<span class="menu-bar"></span>
+</button>
 <div class="menu-links">
 <a href="/">Início</a>
 <a href="/about">Sobre</a>
@@ -78,6 +83,40 @@ margin: 0 auto;
   align-items: center;
 }
 
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 0.75rem;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle .menu-bar {
+  display: block;
+  width: 1.6rem;
+  height: 0.14rem;
+  background: #e2e8f0;
+  border-radius: 999px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+nav.menu-open .menu-toggle .menu-bar:nth-child(1) {
+  transform: translateY(0.28rem) rotate(45deg);
+}
+
+nav.menu-open .menu-toggle .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+nav.menu-open .menu-toggle .menu-bar:nth-child(3) {
+  transform: translateY(-0.28rem) rotate(-45deg);
+}
+
 .menu-links a {
   text-decoration: none;
   color: #93c5fd;
@@ -130,25 +169,86 @@ margin: 0 auto;
   }
 
   .menu-header {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    gap: 0.5rem;
     padding: 0.8rem 1rem;
-  }
-  
-  .menu-links {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
   }
-  
-  .menu-links a {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
+
+  .menu-toggle {
+    display: inline-flex;
   }
-  
+
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.75rem;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 1rem;
+    padding: 0.75rem 0.5rem;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.4);
+  }
+
+  nav.menu-open .menu-links {
+    display: flex;
+  }
+
+  .menu-links a {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.75rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-links a::after {
+    display: none;
+  }
+
   .logo-text {
     font-size: 1.4rem;
   }
 }
 </style>
+
+<script is:inline>
+const initializeNav = () => {
+  const nav = document.querySelector('[data-nav-root]');
+  if (!nav || nav.dataset.navInitialized === 'true') return;
+
+  const toggle = nav.querySelector('.menu-toggle');
+  const links = nav.querySelector('.menu-links');
+  if (!toggle || !links) return;
+
+  const closeMenu = () => {
+    nav.classList.remove('menu-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  links.querySelectorAll('a').forEach((anchor) => {
+    anchor.addEventListener('click', () => {
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        closeMenu();
+      }
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu();
+    }
+  });
+
+  nav.dataset.navInitialized = 'true';
+};
+
+document.addEventListener('DOMContentLoaded', initializeNav);
+document.addEventListener('astro:page-load', initializeNav);
+</script>
