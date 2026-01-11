@@ -1,14 +1,16 @@
 <nav>
   <div class="menu-header">
-    <a href="/" class="site-title">
-      <img src="/logo2.png" alt="Logo" class="logo-image" />
-      <span class="logo-text">Scartech <span class="logo-highlight">Solution</span></span>
-    </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Abrir menu">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </button>
+    <div class="menu-top">
+      <a href="/" class="site-title">
+        <img src="/logo2.png" alt="Logo" class="logo-image" />
+        <span class="logo-text">Scartech <span class="logo-highlight">Solution</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
     <div class="menu-links" id="primary-menu">
       <a href="/">Início</a>
       <a href="/about">Sobre</a>
@@ -26,13 +28,17 @@
       const toggle = nav?.querySelector('.menu-toggle');
       const links = nav?.querySelector('.menu-links');
 
-      if (!nav || !toggle || !links) {
+      if (!nav || !toggle || !links || nav.dataset.toggleInitialized === 'true') {
         return;
       }
 
+      nav.dataset.toggleInitialized = 'true';
+
       const setMenuState = (open) => {
         links.classList.toggle('is-open', open);
+        nav.classList.toggle('menu-open', open);
         toggle.setAttribute('aria-expanded', String(open));
+        toggle.classList.toggle('is-active', open);
       };
 
       const toggleMenu = () => {
@@ -40,29 +46,46 @@
         setMenuState(!isOpen);
       };
 
-      let skipNextClick = false;
+      let lastInputType;
 
-      toggle.addEventListener('pointerdown', (event) => {
-        if (event.pointerType === 'touch') {
-          event.preventDefault();
-          skipNextClick = true;
-          toggleMenu();
-        }
-      });
+      if (window.PointerEvent) {
+        toggle.addEventListener('pointerdown', (event) => {
+          lastInputType = event.pointerType;
+          if (event.pointerType === 'touch') {
+            event.preventDefault();
+            toggleMenu();
+          }
+        });
+      } else {
+        toggle.addEventListener(
+          'touchstart',
+          (event) => {
+            lastInputType = 'touch';
+            event.preventDefault();
+            toggleMenu();
+          },
+          { passive: false }
+        );
+      }
 
       toggle.addEventListener('click', (event) => {
-        if (skipNextClick) {
-          skipNextClick = false;
-          return;
-        }
-
         if (event.detail === 0 && event.screenX === 0 && event.screenY === 0) {
-          // Keyboard activation; toggle immediately.
           toggleMenu();
           return;
         }
 
-        if (event.pointerType !== 'touch') {
+        if (lastInputType === 'touch') {
+          lastInputType = undefined;
+          return;
+        }
+
+        toggleMenu();
+      });
+
+      toggle.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          lastInputType = 'keyboard';
+          event.preventDefault();
           toggleMenu();
         }
       });
@@ -77,6 +100,15 @@
 
       window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
+          setMenuState(false);
+        }
+      });
+
+      document.addEventListener('astro:after-swap', () => {
+        setMenuState(false);
+      });
+      window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
           setMenuState(false);
         }
       });
@@ -110,6 +142,12 @@ nav {
   padding: 1rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.menu-top {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .site-title {
@@ -197,6 +235,11 @@ nav {
   outline-offset: 2px;
 }
 
+.menu-toggle.is-active {
+  background: rgba(30, 64, 175, 0.3);
+  border-color: rgba(96, 165, 250, 0.9);
+}
+
 @media (hover: hover) {
   .site-title:hover {
     transform: translateY(-2px);
@@ -231,19 +274,33 @@ nav {
   }
 
   .menu-header {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.75rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
     padding: 0.8rem 1rem;
     width: 100%;
   }
 
+  .menu-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
   .menu-links {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 0.75rem;
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translateY(-0.35rem);
+    transition: max-height 0.25s ease, opacity 0.18s ease, transform 0.25s ease;
   }
 
   .menu-links a {
@@ -267,7 +324,11 @@ nav {
   }
 
   .menu-links.is-open {
-    display: flex;
+    max-height: 32rem;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 0.5rem 0;
+    transform: translateY(0);
   }
 }
 </style>

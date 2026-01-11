@@ -1185,11 +1185,12 @@ import Icon from '../components/Icon.astro';
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  let parallaxAttached = false;
+  let detachParallax: (() => void) | undefined;
 
   const initPage = () => {
     observer.disconnect();
@@ -1198,9 +1199,17 @@ import Icon from '../components/Icon.astro';
       '.section-title, .section-subtitle, .metodologia-step, .problem-card, .beneficio-card, .servico-card, .garantia-card, .metodologia-badge, .cta-content'
     );
 
-    elements.forEach((element) => observer.observe(element));
+    elements.forEach((element) => {
+      element.classList.remove('revealed');
+      observer.observe(element);
+    });
 
-    if (!parallaxAttached && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    if (detachParallax) {
+      detachParallax();
+      detachParallax = undefined;
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
       const hero = document.querySelector('.hero-yup') as HTMLElement | null;
       if (hero) {
         const onScroll = () => {
@@ -1212,7 +1221,11 @@ import Icon from '../components/Icon.astro';
         };
 
         window.addEventListener('scroll', onScroll, { passive: true });
-        parallaxAttached = true;
+        detachParallax = () => {
+          window.removeEventListener('scroll', onScroll);
+          hero.style.transform = '';
+          hero.style.opacity = '';
+        };
       }
     }
 
@@ -1231,6 +1244,24 @@ import Icon from '../components/Icon.astro';
     }
   };
 
-  document.addEventListener('DOMContentLoaded', initPage);
-  document.addEventListener('astro:page-load', initPage);
+  const scheduleInit = () => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(initPage);
+    });
+  };
+
+  if (document.readyState !== 'loading') {
+    requestAnimationFrame(initPage);
+  } else {
+    document.addEventListener('DOMContentLoaded', initPage);
+  }
+
+  document.addEventListener('astro:after-swap', initPage);
+  document.addEventListener('astro:page-load', scheduleInit);
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+      initPage();
+    }
+  });
 </script>
+
