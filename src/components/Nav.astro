@@ -23,16 +23,22 @@
 
 <script>
   if (typeof window !== 'undefined') {
+    let navToggleController;
+    let currentNav;
+
     const setupMenuToggle = () => {
       const nav = document.querySelector('nav');
       const toggle = nav?.querySelector('.menu-toggle');
       const links = nav?.querySelector('.menu-links');
 
-      if (!nav || !toggle || !links || nav.dataset.toggleInitialized === 'true') {
+      if (!nav || !toggle || !links) {
         return;
       }
 
-      nav.dataset.toggleInitialized = 'true';
+      navToggleController?.abort();
+      navToggleController = new AbortController();
+      const { signal } = navToggleController;
+      currentNav = nav;
 
       const setMenuState = (open) => {
         links.classList.toggle('is-open', open);
@@ -46,79 +52,124 @@
         setMenuState(!isOpen);
       };
 
-      let lastInputType;
+      let touchHandled = false;
+      let touchResetTimer = 0;
 
-      if (window.PointerEvent) {
-        toggle.addEventListener('pointerdown', (event) => {
-          lastInputType = event.pointerType;
-          if (event.pointerType === 'touch') {
-            event.preventDefault();
-            toggleMenu();
-          }
-        });
-      } else {
-        toggle.addEventListener(
-          'touchstart',
-          (event) => {
-            lastInputType = 'touch';
-            event.preventDefault();
-            toggleMenu();
-          },
-          { passive: false }
-        );
+      const handleTouchStart = (event) => {
+        if (event.cancelable) {
+          event.preventDefault();
+        }
+        touchHandled = true;
+        window.clearTimeout(touchResetTimer);
+        toggleMenu();
+        touchResetTimer = window.setTimeout(() => {
+          touchHandled = false;
+        }, 400);
+      };
+
+      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        toggle.addEventListener('touchstart', handleTouchStart, { passive: false, signal });
       }
 
-      toggle.addEventListener('click', (event) => {
-        if (event.detail === 0 && event.screenX === 0 && event.screenY === 0) {
+      toggle.addEventListener(
+        'click',
+        (event) => {
+          if (event.detail === 0 && event.screenX === 0 && event.screenY === 0) {
+            toggleMenu();
+            return;
+          }
+
+          if (touchHandled) {
+            return;
+          }
+
           toggleMenu();
-          return;
-        }
+        },
+        { signal }
+      );
 
-        if (lastInputType === 'touch') {
-          lastInputType = undefined;
-          return;
-        }
+      toggle.addEventListener(
+        'keydown',
+        (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleMenu();
+          }
+        },
+        { signal }
+      );
 
-        toggleMenu();
-      });
-
-      toggle.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          lastInputType = 'keyboard';
-          event.preventDefault();
-          toggleMenu();
-        }
-      });
-
-      links.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          if (window.innerWidth <= 768) {
+      document.addEventListener(
+        'keydown',
+        (event) => {
+          if (event.key === 'Escape' && nav.classList.contains('menu-open')) {
             setMenuState(false);
           }
-        });
+        },
+        { signal }
+      );
+
+      links.querySelectorAll('a').forEach((link) => {
+        link.addEventListener(
+          'click',
+          () => {
+            if (window.innerWidth <= 768) {
+              setMenuState(false);
+            }
+          },
+          { signal }
+        );
       });
 
-      window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-          setMenuState(false);
-        }
-      });
+      window.addEventListener(
+        'resize',
+        () => {
+          if (window.innerWidth > 768) {
+            setMenuState(false);
+          }
+        },
+        { signal }
+      );
 
-      document.addEventListener('astro:after-swap', () => {
+      const afterSwapHandler = () => {
         setMenuState(false);
-      });
-      window.addEventListener('pageshow', (event) => {
-        if (event.persisted) {
-          setMenuState(false);
-        }
+        requestAnimationFrame(() => {
+          requestAnimationFrame(setupMenuToggle);
+        });
+      };
+
+      document.addEventListener('astro:after-swap', afterSwapHandler, { signal });
+
+      window.addEventListener(
+        'pageshow',
+        (event) => {
+          if (event.persisted) {
+            setMenuState(false);
+            requestAnimationFrame(() => {
+              requestAnimationFrame(setupMenuToggle);
+            });
+          }
+        },
+        { signal }
+      );
+
+      setMenuState(false);
+    };
+
+    const scheduleSetup = () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(setupMenuToggle);
       });
     };
 
     if (document.readyState !== 'loading') {
-      setupMenuToggle();
+      scheduleSetup();
     } else {
-      document.addEventListener('DOMContentLoaded', setupMenuToggle);
+      document.addEventListener('DOMContentLoaded', scheduleSetup, { once: true });
     }
+
+    document.addEventListener('astro:page-load', scheduleSetup);
+    document.addEventListener('astro:after-swap', scheduleSetup);
   }
 </script>
 
