@@ -262,8 +262,10 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e) {
   transition: transform 0.3s ease;
 }
 
-.submit-btn:hover {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .submit-btn:hover {
+    transform: scale(1.05);
+  }
 }
 
 .contact-image {
@@ -313,8 +315,10 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e) {
   margin-top: 0.5rem;
 }
 
-.info-card a:hover {
-  color: #60a5fa;
+@media (hover: hover) {
+  .info-card a:hover {
+    color: #60a5fa;
+  }
 }
 
 .response-time {
@@ -377,8 +381,10 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e) {
   transition: transform 0.3s ease;
 }
 
-.whatsapp-btn-big:hover {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .whatsapp-btn-big:hover {
+    transform: scale(1.05);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -389,6 +395,10 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e) {
 }
 
 @media (max-width: 768px) {
+  .contact-container {
+    padding-top: 12rem;
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }

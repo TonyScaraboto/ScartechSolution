@@ -50,9 +50,11 @@ const { title, description } = Astro.props;
 				align-items: center;
 				justify-content: center;
 			}
-			.whatsapp-float:hover {
-				transform: scale(1.08);
-				box-shadow: 0 8px 32px 0 rgba(37,211,102,0.28);
+			@media (hover: hover) {
+				.whatsapp-float:hover {
+					transform: scale(1.08);
+					box-shadow: 0 8px 32px 0 rgba(37,211,102,0.28);
+				}
 			}
 		</style>
 		<style>
