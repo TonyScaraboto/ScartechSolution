@@ -7,34 +7,30 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
 ---
 
 <BaseLayout
-  title="Aplicativos | Scartech Solution"
-  description="ScarTech — gestão para assistências técnicas e para fornecedores de peças de smartphones: OS, estoque, vendas e faturamento."
+  title="Scartech Manager | Scartech Solution"
+  description="Scartech Manager: um só lugar para OS, estoque, vendas e financeiro — feito para assistências e para quem fornece peças de smartphones. Teste o protótipo."
 >
   <div class="apps-page">
     <section class="hero-apps">
-      <p class="hero-eyebrow">Produto ScarTech</p>
-      <h1 class="hero-title"><span class="highlight">Aplicativos</span></h1>
+      <p class="hero-eyebrow">ScarTech</p>
+      <h1 class="hero-title"><span class="highlight">Scartech Manager</span></h1>
       <p class="hero-lead">
-        O <strong>ScarTech</strong> é o nosso sistema de gestão para assistências técnicas e também para <strong>fornecedores de peças de smartphones</strong>:
-        telas, baterias, conectores e demais itens do canal mobile. Quem opera a loja controla ordens de serviço, estoque em tempo real, vendas e
-        financeiro; quem fornece peças usa o mesmo ecossistema para vender e acompanhar o relacionamento com as assistências — tudo com perfis
-        separados para <em>assistência</em> e <em>fornecedor</em>.
+        Menos planilha, mais controle. O <strong>Scartech Manager</strong> foi pensado para quem vive de bancada e também para <strong>quem abastece o mercado mobile</strong> — telas, baterias, conectores e tudo que gira em torno do smartphone. Na assistência, você fecha OS, estoque e caixa no mesmo fluxo; no fornecimento, vende e acompanha as parcerias com clareza. Dois perfis, <em>um ecossistema</em>, sem complicação.
       </p>
       <div class="hero-cta">
         <a class="btn-primary" href={SCARTECH_APP_URL} target="_blank" rel="noopener noreferrer">
-          Acessar o ScarTech
+          Abrir o protótipo agora
         </a>
       </div>
     </section>
 
     <section class="gallery-section" aria-labelledby="gallery-heading">
-      <h2 id="gallery-heading" class="section-title">Visão do sistema</h2>
-      <p class="section-intro">
-        Capturas reais do protótipo: tela de entrada, painel principal com módulos (incluindo fornecedores) e criação de ordem de serviço com geração de
-        PDF — o mesmo fluxo usado na gestão de assistência e no relacionamento com quem fornece peças de smartphones.
+      <h2 id="gallery-heading" class="section-title reveal-on-scroll">Veja por dentro</h2>
+      <p class="section-intro reveal-on-scroll">
+        Interface real do protótipo: do primeiro acesso ao painel que reúne <strong>OS, faturamento, produtos, fornecedores e vendas</strong> — até a abertura de uma ordem com <strong>PDF pronto para o cliente</strong>. É assim que a operação ganha ritmo, seja na loja ou no atacado de peças.
       </p>
       <div class="gallery">
-        <figure class="gallery-item gallery-item--wide">
+        <figure class="gallery-item gallery-item--wide reveal-on-scroll" style="--reveal-delay: 0ms">
           <img
             src="/assets/aplicativos/scartech-tela-login.png"
             alt="ScarTech: página inicial com apresentação da plataforma e formulário de login"
@@ -43,9 +39,9 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
             loading="eager"
             decoding="async"
           />
-          <figcaption>Login e apresentação — acesso seguro ao painel e mensagem clara do que a plataforma oferece.</figcaption>
+          <figcaption>Primeira impressão que vende: identidade forte, proposta clara e login com cara de produto sério.</figcaption>
         </figure>
-        <figure class="gallery-item">
+        <figure class="gallery-item reveal-on-scroll" style="--reveal-delay: 40ms">
           <img
             src="/assets/aplicativos/scartech-dashboard.png"
             alt="ScarTech: dashboard com atalhos para ordens de serviço, faturamento, produtos, fornecedores e vendas"
@@ -54,9 +50,9 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
             loading="lazy"
             decoding="async"
           />
-          <figcaption>Painel inicial — visão rápida das áreas da operação, incluindo fornecedores e vendas.</figcaption>
+          <figcaption>Um hub para tudo que importa: atalhos inteligentes e visão do negócio sem ficar pulando de sistema em sistema.</figcaption>
         </figure>
-        <figure class="gallery-item">
+        <figure class="gallery-item reveal-on-scroll" style="--reveal-delay: 80ms">
           <img
             src="/assets/aplicativos/scartech-nova-ordem-servico.png"
             alt="ScarTech: modal Nova Ordem de Serviço com dados do cliente, aparelho, defeito e opção Salvar e Gerar PDF"
@@ -65,38 +61,41 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
             loading="lazy"
             decoding="async"
           />
-          <figcaption>Nova ordem de serviço — cadastro completo (incluindo modelo do aparelho) e documento em PDF.</figcaption>
+          <figcaption>OS completa em poucos cliques: cliente, aparelho, defeito, garantia — e <strong>PDF</strong> para profissionalizar o atendimento.</figcaption>
         </figure>
       </div>
-      <div class="gallery-cta-wrap">
+      <div class="gallery-cta-wrap reveal-on-scroll">
         <a class="btn-primary btn-primary--large" href={SCARTECH_APP_URL} target="_blank" rel="noopener noreferrer">
-          Experimentar no navegador
+          Explorar o sistema ao vivo
         </a>
       </div>
     </section>
 
     <section class="features-section" aria-labelledby="features-heading">
-      <h2 id="features-heading" class="section-title">O que o ScarTech entrega</h2>
+      <h2 id="features-heading" class="section-title reveal-on-scroll">Por que vale a pena</h2>
+      <p class="section-intro features-intro reveal-on-scroll">
+        Do balcão ao fornecedor, cada módulo existe para <strong>ganhar tempo</strong> e <strong>reduzir erro</strong> — sem perder o controle do que entra, sai e fatura.
+      </p>
       <div class="features-grid">
-        <article class="feature-card">
+        <article class="feature-card reveal-on-scroll" style="--reveal-delay: 0ms">
           <div class="feature-icon"><Icon icon="terminal-window" size="2.25rem" color="#3b82f6" /></div>
-          <h3>Ordens de serviço</h3>
-          <p>Acompanhe abertura, execução e entrega com clareza para a equipe e para o cliente.</p>
+          <h3>Ordens de serviço que andam</h3>
+          <p>Do recebimento à entrega, todo mundo sabe o status — equipe alinhada e cliente com resposta na hora certa.</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card reveal-on-scroll" style="--reveal-delay: 35ms">
           <div class="feature-icon"><Icon icon="strategy" size="2.25rem" color="#3b82f6" /></div>
-          <h3>Estoque em tempo real</h3>
-          <p>Peças e produtos com visão atualizada para evitar ruptura e retrabalho.</p>
+          <h3>Estoque que não te surpreende</h3>
+          <p>Peças e produtos sempre visíveis: menos “acabou sem aviso” e mais compra certeira.</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card reveal-on-scroll" style="--reveal-delay: 70ms">
           <div class="feature-icon"><Icon icon="trophy" size="2.25rem" color="#3b82f6" /></div>
-          <h3>Finanças e relatórios</h3>
-          <p>Base para decisões com faturamento e indicadores alinhados ao dia a dia da loja.</p>
+          <h3>Dinheiro com narrativa</h3>
+          <p>Faturamento e indicadores que conversam com o seu dia a dia — decisão com número na mesa, não no feeling.</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card reveal-on-scroll" style="--reveal-delay: 105ms">
           <div class="feature-icon"><Icon icon="paper-plane-tilt" size="2.25rem" color="#3b82f6" /></div>
-          <h3>Multiperfil</h3>
-          <p>Assistência técnica e fornecedores de peças de smartphones no mesmo produto, cada um com sua visão.</p>
+          <h3>Dois mundos, uma plataforma</h3>
+          <p>Assistência e fornecedor de peças mobile lado a lado: cada um enxerga o que precisa, sem misturar permissão nem confusão.</p>
         </article>
       </div>
     </section>
@@ -104,6 +103,56 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
     <ContactCTA />
   </div>
 </BaseLayout>
+
+<script is:inline>
+  (function () {
+    var prevCleanup = null;
+
+    function initScrollReveal() {
+      if (prevCleanup) {
+        prevCleanup();
+        prevCleanup = null;
+      }
+
+      var root = document.querySelector('.apps-page');
+      if (!root) return;
+
+      document.documentElement.classList.add('js-reveal');
+
+      var nodes = root.querySelectorAll('.reveal-on-scroll');
+      if (!nodes.length) return;
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        nodes.forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+
+      var io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          });
+        },
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.1 }
+      );
+
+      nodes.forEach(function (el) {
+        if (!el.classList.contains('is-visible')) io.observe(el);
+      });
+
+      prevCleanup = function () {
+        io.disconnect();
+      };
+    }
+
+    initScrollReveal();
+    document.addEventListener('astro:page-load', initScrollReveal);
+  })();
+</script>
 
 <style>
   .apps-page {
@@ -263,6 +312,37 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
     margin: 0 auto 2.5rem;
   }
 
+  .features-intro {
+    max-width: 720px;
+    margin-bottom: 2rem;
+  }
+
+  /* Com JS: anima ao rolar. Sem classe .js-reveal, conteúdo permanece visível. */
+  .js-reveal .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition:
+      opacity 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .js-reveal .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    will-change: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js-reveal .reveal-on-scroll {
+      opacity: 1;
+      transform: none;
+      transition: none;
+      will-change: auto;
+    }
+  }
+
   .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -280,8 +360,22 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
+  .js-reveal .gallery-item.reveal-on-scroll {
+    transition:
+      opacity 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      box-shadow 0.2s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
   @media (hover: hover) {
-    .gallery-item:hover {
+    .js-reveal .gallery-item.reveal-on-scroll.is-visible:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(37, 99, 235, 0.2);
+    }
+
+    .gallery-item:not(.reveal-on-scroll):hover,
+    html:not(.js-reveal) .gallery-item:hover {
       transform: translateY(-4px);
       box-shadow: 0 20px 50px rgba(37, 99, 235, 0.2);
     }
@@ -324,6 +418,23 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
     border-radius: 1rem;
     padding: 1.5rem;
     backdrop-filter: blur(10px);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .js-reveal .feature-card.reveal-on-scroll {
+    transition:
+      opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  @media (hover: hover) {
+    .feature-card:hover {
+      border-color: rgba(59, 130, 246, 0.35);
+      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.12);
+    }
   }
 
   .feature-icon {
