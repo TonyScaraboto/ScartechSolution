@@ -1,3 +1,15 @@
+---
+interface Props {
+  ctaHref?: string | undefined;
+  ctaLabel?: string | undefined;
+  ctaExternal?: boolean | undefined;
+}
+
+const { ctaHref, ctaLabel, ctaExternal = false } = Astro.props;
+const ctaRel = ctaExternal ? 'noopener noreferrer' : undefined;
+const ctaTarget = ctaExternal ? '_blank' : undefined;
+---
+
 <nav>
   <div class="menu-header">
     <div class="menu-top">
@@ -18,6 +30,11 @@
       <a href="/aplicativos">Aplicativos</a>
       <a href="/work">Portfólio</a>
       <a href="/contact">Contato</a>
+      {ctaHref && ctaLabel && (
+        <a href={ctaHref} class="nav-cta" target={ctaTarget} rel={ctaRel}>
+          {ctaLabel}
+        </a>
+      )}
     </div>
   </div>
 </nav>
@@ -253,7 +270,7 @@ nav {
   position: relative;
 }
 
-.menu-links a::after {
+.menu-links a:not(.nav-cta)::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -263,6 +280,37 @@ nav {
   height: 2px;
   background: linear-gradient(90deg, #3b82f6, #2563eb);
   transition: width 0.3s ease;
+}
+
+.nav-cta {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  color: #fff !important;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: 1px solid rgba(96, 165, 250, 0.55);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+  margin-left: 0.25rem;
+  white-space: nowrap;
+}
+
+.nav-cta::after {
+  display: none !important;
+}
+
+@media (hover: hover) {
+  .nav-cta:hover {
+    color: #fff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
+  }
+}
+
+.nav-cta:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
 }
 
 .menu-toggle {
@@ -305,12 +353,12 @@ nav {
     text-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 15px rgba(147, 197, 253, 0.4);
   }
 
-  .menu-links a:hover {
+  .menu-links a:not(.nav-cta):hover {
     color: #ffffff;
     text-shadow: 0 0 10px rgba(147, 197, 253, 0.6);
   }
 
-  .menu-links a:hover::after {
+  .menu-links a:not(.nav-cta):hover::after {
     width: 80%;
   }
 
@@ -363,6 +411,12 @@ nav {
     background: rgba(15, 23, 42, 0.8);
     border: 1px solid rgba(59, 130, 246, 0.3);
     border-radius: 999px;
+  }
+
+  .menu-links a.nav-cta {
+    margin-left: 0;
+    margin-top: 0.35rem;
+    border-color: rgba(96, 165, 250, 0.55);
   }
 
   .logo-text {

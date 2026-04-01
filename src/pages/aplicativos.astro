@@ -9,9 +9,27 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
 <BaseLayout
   title="Aplicativos | Scartech Solution"
   description="ScarTech — plataforma de gestão para assistência técnica: ordens de serviço, estoque, vendas e faturamento."
+  headerCtaHref={SCARTECH_APP_URL}
+  headerCtaLabel="Acessar ScarTech"
+  headerCtaExternal={true}
 >
   <div class="apps-page">
-    <section class="hero-apps">
+    <div class="apps-shell">
+      <aside class="apps-sidebar" aria-label="Menu lateral da página Aplicativos">
+        <p class="sidebar-heading">Nesta página</p>
+        <nav class="sidebar-nav" aria-label="Seções">
+          <a href="#intro">Apresentação</a>
+          <a href="#gallery-heading">Visão do sistema</a>
+          <a href="#features-heading">Funcionalidades</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <a class="btn-sidebar-cta" href={SCARTECH_APP_URL} target="_blank" rel="noopener noreferrer">
+          Acessar o ScarTech
+        </a>
+      </aside>
+
+      <div class="apps-main">
+    <section class="hero-apps" id="intro">
       <p class="hero-eyebrow">Produto ScarTech</p>
       <h1 class="hero-title"><span class="highlight">Aplicativos</span></h1>
       <p class="hero-lead">
@@ -97,7 +115,11 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
       </div>
     </section>
 
-    <ContactCTA />
+    <section id="contato" class="apps-cta-wrap">
+      <ContactCTA />
+    </section>
+      </div>
+    </div>
   </div>
 </BaseLayout>
 
@@ -112,6 +134,111 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
     padding-top: 7rem;
     padding-bottom: 2rem;
     overflow: hidden;
+  }
+
+  .apps-shell {
+    display: grid;
+    grid-template-columns: 15.5rem minmax(0, 1fr);
+    gap: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    align-items: start;
+  }
+
+  .apps-sidebar {
+    position: sticky;
+    top: 6.5rem;
+    padding: 1.25rem 1rem;
+    border-radius: 1rem;
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sidebar-heading {
+    margin: 0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #60a5fa;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .sidebar-nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.45rem 0.5rem;
+    border-radius: 0.5rem;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  @media (hover: hover) {
+    .sidebar-nav a:hover {
+      background: rgba(59, 130, 246, 0.15);
+      color: #fff;
+    }
+  }
+
+  .sidebar-nav a:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  .btn-sidebar-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.25rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0.65rem;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: 1px solid rgba(96, 165, 250, 0.5);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  @media (hover: hover) {
+    .btn-sidebar-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.4);
+    }
+  }
+
+  .btn-sidebar-cta:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 2px;
+  }
+
+  .apps-main {
+    min-width: 0;
+  }
+
+  .apps-cta-wrap {
+    scroll-margin-top: 6rem;
+  }
+
+  #intro,
+  #gallery-heading,
+  #features-heading,
+  #contato {
+    scroll-margin-top: 6.5rem;
   }
 
   .apps-page::before {
@@ -350,6 +477,52 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
     }
   }
 
+  @media (max-width: 1023px) {
+    .apps-shell {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 0 1rem;
+    }
+
+    .apps-sidebar {
+      position: sticky;
+      top: 4.75rem;
+      z-index: 8;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.65rem 1rem;
+      margin: 0 0 1.25rem;
+      padding: 0.85rem 1rem;
+      border-radius: 0.75rem;
+    }
+
+    .sidebar-heading {
+      width: 100%;
+      margin-bottom: -0.35rem;
+    }
+
+    .sidebar-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex: 1;
+      gap: 0.35rem;
+    }
+
+    .sidebar-nav a {
+      padding: 0.4rem 0.65rem;
+      font-size: 0.82rem;
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    .btn-sidebar-cta {
+      margin-top: 0;
+      flex: 1 1 auto;
+      min-width: 11rem;
+    }
+  }
+
   @media (max-width: 768px) {
     .apps-page {
       padding-top: 12rem;
@@ -361,6 +534,10 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
 
     .features-grid {
       grid-template-columns: 1fr;
+    }
+
+    .apps-sidebar {
+      top: 5.5rem;
     }
   }
 </style>
