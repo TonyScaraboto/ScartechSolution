@@ -11,13 +11,9 @@ import Nav from '../components/Nav.astro';
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
-	/** Botão opcional no cabeçalho (ex.: CTA externo na página Aplicativos) */
-	headerCtaHref?: string | undefined;
-	headerCtaLabel?: string | undefined;
-	headerCtaExternal?: boolean | undefined;
 }
 
-const { title, description, headerCtaHref, headerCtaLabel, headerCtaExternal } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <html lang="en">
@@ -27,7 +23,7 @@ const { title, description, headerCtaHref, headerCtaLabel, headerCtaExternal } =
 	</head>
 	<body>
 		<div class="stack backgrounds">
-			<Nav ctaHref={headerCtaHref} ctaLabel={headerCtaLabel} ctaExternal={headerCtaExternal} />
+			<Nav />
 			<slot />
 			<Footer />
 		</div>

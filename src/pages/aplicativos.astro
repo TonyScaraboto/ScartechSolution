@@ -8,78 +8,64 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
 
 <BaseLayout
   title="Aplicativos | Scartech Solution"
-  description="ScarTech — plataforma de gestão para assistência técnica: ordens de serviço, estoque, vendas e faturamento."
-  headerCtaHref={SCARTECH_APP_URL}
-  headerCtaLabel="Acessar ScarTech"
-  headerCtaExternal={true}
+  description="ScarTech — gestão para assistências técnicas e para fornecedores de peças de smartphones: OS, estoque, vendas e faturamento."
 >
   <div class="apps-page">
-    <div class="apps-shell">
-      <aside class="apps-sidebar" aria-label="Menu lateral da página Aplicativos">
-        <p class="sidebar-heading">Nesta página</p>
-        <nav class="sidebar-nav" aria-label="Seções">
-          <a href="#intro">Apresentação</a>
-          <a href="#gallery-heading">Visão do sistema</a>
-          <a href="#features-heading">Funcionalidades</a>
-          <a href="#contato">Contato</a>
-        </nav>
-        <a class="btn-sidebar-cta" href={SCARTECH_APP_URL} target="_blank" rel="noopener noreferrer">
-          Acessar o ScarTech
-        </a>
-      </aside>
-
-      <div class="apps-main">
-    <section class="hero-apps" id="intro">
+    <section class="hero-apps">
       <p class="hero-eyebrow">Produto ScarTech</p>
       <h1 class="hero-title"><span class="highlight">Aplicativos</span></h1>
       <p class="hero-lead">
-        O <strong>ScarTech</strong> é o nosso sistema de gestão para assistências técnicas: controle de ordens de serviço, estoque em tempo real,
-        vendas e relatórios financeiros — com perfis para quem <em>gerencia a assistência</em> e para <em>fornecedores</em> que vendem peças e
-        produtos para o canal.
+        O <strong>ScarTech</strong> é o nosso sistema de gestão para assistências técnicas e também para <strong>fornecedores de peças de smartphones</strong>:
+        telas, baterias, conectores e demais itens do canal mobile. Quem opera a loja controla ordens de serviço, estoque em tempo real, vendas e
+        financeiro; quem fornece peças usa o mesmo ecossistema para vender e acompanhar o relacionamento com as assistências — tudo com perfis
+        separados para <em>assistência</em> e <em>fornecedor</em>.
       </p>
       <div class="hero-cta">
         <a class="btn-primary" href={SCARTECH_APP_URL} target="_blank" rel="noopener noreferrer">
           Acessar o ScarTech
         </a>
-        <span class="hero-cta-note">Abre o protótipo em uma nova aba</span>
       </div>
     </section>
 
     <section class="gallery-section" aria-labelledby="gallery-heading">
       <h2 id="gallery-heading" class="section-title">Visão do sistema</h2>
       <p class="section-intro">
-        Telas ilustrativas do fluxo: acesso seguro, painel de OS e visão integrada de estoque com faturamento.
+        Capturas reais do protótipo: tela de entrada, painel principal com módulos (incluindo fornecedores) e criação de ordem de serviço com geração de
+        PDF — o mesmo fluxo usado na gestão de assistência e no relacionamento com quem fornece peças de smartphones.
       </p>
       <div class="gallery">
         <figure class="gallery-item gallery-item--wide">
           <img
-            src="/assets/aplicativos/scartech-tela-login.svg"
-            alt="Interface de login e boas-vindas do ScarTech com campos de e-mail e senha"
-            width="1200"
-            height="750"
+            src="/assets/aplicativos/scartech-tela-login.png"
+            alt="ScarTech: página inicial com apresentação da plataforma e formulário de login"
+            width="1024"
+            height="349"
             loading="eager"
+            decoding="async"
           />
-          <figcaption>Entrada na plataforma — identidade visual e foco em segurança.</figcaption>
+          <figcaption>Login e apresentação — acesso seguro ao painel e mensagem clara do que a plataforma oferece.</figcaption>
         </figure>
         <figure class="gallery-item">
           <img
-            src="/assets/aplicativos/scartech-painel-os.svg"
-            alt="Painel de ordens de serviço com resumo e lista de OS"
-            width="1200"
-            height="750"
+            src="/assets/aplicativos/scartech-dashboard.png"
+            alt="ScarTech: dashboard com atalhos para ordens de serviço, faturamento, produtos, fornecedores e vendas"
+            width="1024"
+            height="354"
             loading="lazy"
+            decoding="async"
           />
-          <figcaption>Painel de ordens de serviço com status e ações rápidas.</figcaption>
+          <figcaption>Painel inicial — visão rápida das áreas da operação, incluindo fornecedores e vendas.</figcaption>
         </figure>
         <figure class="gallery-item">
           <img
-            src="/assets/aplicativos/scartech-estoque-financeiro.svg"
-            alt="Telas de estoque em tempo real e gráficos de faturamento"
-            width="1200"
-            height="750"
+            src="/assets/aplicativos/scartech-nova-ordem-servico.png"
+            alt="ScarTech: modal Nova Ordem de Serviço com dados do cliente, aparelho, defeito e opção Salvar e Gerar PDF"
+            width="1024"
+            height="349"
             loading="lazy"
+            decoding="async"
           />
-          <figcaption>Estoque, faturamento e relatórios no mesmo ecossistema.</figcaption>
+          <figcaption>Nova ordem de serviço — cadastro completo (incluindo modelo do aparelho) e documento em PDF.</figcaption>
         </figure>
       </div>
       <div class="gallery-cta-wrap">
@@ -110,16 +96,12 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
         <article class="feature-card">
           <div class="feature-icon"><Icon icon="paper-plane-tilt" size="2.25rem" color="#3b82f6" /></div>
           <h3>Multiperfil</h3>
-          <p>Fluxos para quem opera a assistência e para fornecedores no mesmo produto.</p>
+          <p>Assistência técnica e fornecedores de peças de smartphones no mesmo produto, cada um com sua visão.</p>
         </article>
       </div>
     </section>
 
-    <section id="contato" class="apps-cta-wrap">
-      <ContactCTA />
-    </section>
-      </div>
-    </div>
+    <ContactCTA />
   </div>
 </BaseLayout>
 
@@ -134,111 +116,6 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
     padding-top: 7rem;
     padding-bottom: 2rem;
     overflow: hidden;
-  }
-
-  .apps-shell {
-    display: grid;
-    grid-template-columns: 15.5rem minmax(0, 1fr);
-    gap: 2rem;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-    align-items: start;
-  }
-
-  .apps-sidebar {
-    position: sticky;
-    top: 6.5rem;
-    padding: 1.25rem 1rem;
-    border-radius: 1rem;
-    background: rgba(15, 23, 42, 0.75);
-    border: 1px solid rgba(59, 130, 246, 0.25);
-    backdrop-filter: blur(12px);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .sidebar-heading {
-    margin: 0;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #60a5fa;
-  }
-
-  .sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .sidebar-nav a {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 0.45rem 0.5rem;
-    border-radius: 0.5rem;
-    transition: background 0.2s ease, color 0.2s ease;
-  }
-
-  @media (hover: hover) {
-    .sidebar-nav a:hover {
-      background: rgba(59, 130, 246, 0.15);
-      color: #fff;
-    }
-  }
-
-  .sidebar-nav a:focus-visible {
-    outline: 2px solid #3b82f6;
-    outline-offset: 2px;
-  }
-
-  .btn-sidebar-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.25rem;
-    padding: 0.75rem 1rem;
-    font-size: 0.88rem;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 0.65rem;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    border: 1px solid rgba(96, 165, 250, 0.5);
-    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  @media (hover: hover) {
-    .btn-sidebar-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.4);
-    }
-  }
-
-  .btn-sidebar-cta:focus-visible {
-    outline: 2px solid #93c5fd;
-    outline-offset: 2px;
-  }
-
-  .apps-main {
-    min-width: 0;
-  }
-
-  .apps-cta-wrap {
-    scroll-margin-top: 6rem;
-  }
-
-  #intro,
-  #gallery-heading,
-  #features-heading,
-  #contato {
-    scroll-margin-top: 6.5rem;
   }
 
   .apps-page::before {
@@ -362,11 +239,6 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
     font-size: 1.05rem;
   }
 
-  .hero-cta-note {
-    font-size: 0.875rem;
-    color: #64748b;
-  }
-
   .gallery-section,
   .features-section {
     max-width: 1200px;
@@ -477,52 +349,6 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
     }
   }
 
-  @media (max-width: 1023px) {
-    .apps-shell {
-      grid-template-columns: 1fr;
-      gap: 0;
-      padding: 0 1rem;
-    }
-
-    .apps-sidebar {
-      position: sticky;
-      top: 4.75rem;
-      z-index: 8;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.65rem 1rem;
-      margin: 0 0 1.25rem;
-      padding: 0.85rem 1rem;
-      border-radius: 0.75rem;
-    }
-
-    .sidebar-heading {
-      width: 100%;
-      margin-bottom: -0.35rem;
-    }
-
-    .sidebar-nav {
-      flex-direction: row;
-      flex-wrap: wrap;
-      flex: 1;
-      gap: 0.35rem;
-    }
-
-    .sidebar-nav a {
-      padding: 0.4rem 0.65rem;
-      font-size: 0.82rem;
-      background: rgba(30, 41, 59, 0.6);
-      border: 1px solid rgba(59, 130, 246, 0.2);
-    }
-
-    .btn-sidebar-cta {
-      margin-top: 0;
-      flex: 1 1 auto;
-      min-width: 11rem;
-    }
-  }
-
   @media (max-width: 768px) {
     .apps-page {
       padding-top: 12rem;
@@ -534,10 +360,6 @@ const SCARTECH_APP_URL = 'https://scartech-frontend.vercel.app/prototipo/index.h
 
     .features-grid {
       grid-template-columns: 1fr;
-    }
-
-    .apps-sidebar {
-      top: 5.5rem;
     }
   }
 </style>
