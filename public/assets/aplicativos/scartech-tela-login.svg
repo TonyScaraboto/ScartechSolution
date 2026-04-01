@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="Prévia da tela de login ScarTech">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#020617"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)" rx="12"/>
+  <rect x="24" y="24" width="1152" height="48" rx="8" fill="#1e293b" stroke="#334155"/>
+  <circle cx="48" cy="48" r="6" fill="#ef4444"/><circle cx="72" cy="48" r="6" fill="#eab308"/><circle cx="96" cy="48" r="6" fill="#22c55e"/>
+  <rect x="400" y="38" width="400" height="20" rx="4" fill="#334155"/>
+  <rect x="80" y="120" width="480" height="590" rx="16" fill="#1e293b" stroke="rgba(59,130,246,0.35)"/>
+  <text x="120" y="200" fill="#93c5fd" font-family="system-ui,sans-serif" font-size="28" font-weight="700">ScarTech</text>
+  <text x="120" y="240" fill="#64748b" font-family="system-ui,sans-serif" font-size="16">Assistência Técnica Digital</text>
+  <rect x="120" y="280" width="360" height="8" rx="4" fill="#334155"/>
+  <rect x="120" y="310" width="280" height="8" rx="4" fill="#334155"/>
+  <rect x="120" y="360" width="400" height="44" rx="8" fill="#0f172a" stroke="#475569"/>
+  <rect x="120" y="420" width="400" height="44" rx="8" fill="#0f172a" stroke="#475569"/>
+  <rect x="120" y="500" width="400" height="48" rx="10" fill="url(#accent)"/>
+  <text x="320" y="532" fill="#fff" font-family="system-ui,sans-serif" font-size="15" font-weight="600" text-anchor="middle">Entrar na plataforma</text>
+  <rect x="640" y="120" width="480" height="590" rx="16" fill="#0f172a" stroke="rgba(59,130,246,0.25)"/>
+  <text x="880" y="220" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="22" font-weight="700" text-anchor="middle">Bem-vindo de volta</text>
+  <text x="880" y="255" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="14" text-anchor="middle">Entre com sua conta</text>
+  <rect x="700" y="300" width="360" height="40" rx="8" fill="#1e293b" stroke="#475569"/>
+  <rect x="700" y="360" width="360" height="40" rx="8" fill="#1e293b" stroke="#475569"/>
+  <rect x="700" y="440" width="360" height="46" rx="10" fill="url(#accent)"/>
+  <text x="880" y="470" fill="#fff" font-family="system-ui,sans-serif" font-size="14" font-weight="600" text-anchor="middle">Entrar</text>
+</svg>
