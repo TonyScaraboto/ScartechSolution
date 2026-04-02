@@ -238,17 +238,17 @@ import Icon from '../components/Icon.astro';
   margin: 0 auto 5rem;
   text-align: center;
   border: 1px solid rgba(59, 130, 246, 0.3);
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translate3d(0, 16px, 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -1070,13 +1070,6 @@ import Icon from '../components/Icon.astro';
   transform: translateY(0);
 }
 
-/* Parallax suave */
-@media (prefers-reduced-motion: no-preference) {
-  .hero-yup {
-    transform: translateY(0);
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-}
 </style>
 
 <script>
@@ -1095,8 +1088,6 @@ import Icon from '../components/Icon.astro';
     });
   }, observerOptions);
 
-  let detachParallax: (() => void) | undefined;
-
   const initPage = () => {
     observer.disconnect();
 
@@ -1108,31 +1099,6 @@ import Icon from '../components/Icon.astro';
       element.classList.remove('revealed');
       observer.observe(element);
     });
-
-    if (detachParallax) {
-      detachParallax();
-      detachParallax = undefined;
-    }
-
-    if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-      const hero = document.querySelector('.hero-yup') as HTMLElement | null;
-      if (hero) {
-        const onScroll = () => {
-          const scrolled = window.pageYOffset;
-          if (scrolled < window.innerHeight) {
-            hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-            hero.style.opacity = `${1 - scrolled / 800}`;
-          }
-        };
-
-        window.addEventListener('scroll', onScroll, { passive: true });
-        detachParallax = () => {
-          window.removeEventListener('scroll', onScroll);
-          hero.style.transform = '';
-          hero.style.opacity = '';
-        };
-      }
-    }
 
     const emailBtn = document.querySelector('.email-btn') as HTMLAnchorElement | null;
     if (emailBtn && !emailBtn.dataset.desktopListener) {
