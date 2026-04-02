@@ -222,88 +222,15 @@ import Icon from '../components/Icon.astro';
 /* Layout Principal */
 .main-hero-light {
   background: linear-gradient(135deg, #000000 0%, #0a0a0a 30%, #050505 60%, #000000 100%);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
   min-height: 100vh;
   padding: 6rem 1rem 4rem;
   position: relative;
   overflow: hidden;
 }
 
-.main-hero-light::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 50%, transparent 70%);
-  animation: float 20s ease-in-out infinite, neonPulse 3s ease-in-out infinite;
-  pointer-events: none;
-  filter: blur(40px);
-}
-
-.main-hero-light::after {
-  content: '';
-  position: absolute;
-  bottom: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.015) 0%, rgba(255, 255, 255, 0.008) 50%, transparent 70%);
-  animation: float 25s ease-in-out infinite reverse, neonPulse 4s ease-in-out infinite alternate;
-  pointer-events: none;
-  filter: blur(40px);
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  33% {
-    transform: translate(30px, -30px) rotate(5deg);
-  }
-  66% {
-    transform: translate(-20px, 20px) rotate(-5deg);
-  }
-}
-
-@keyframes neonPulse {
-  0%, 100% {
-    opacity: 0.5;
-    filter: blur(40px);
-  }
-  50% {
-    opacity: 1;
-    filter: blur(60px);
-  }
-}
-
-@keyframes neonGlow {
-  0%, 100% {
-    filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 20px currentColor);
-  }
-  50% {
-    filter: drop-shadow(0 0 20px currentColor) drop-shadow(0 0 40px currentColor) drop-shadow(0 0 60px currentColor);
-  }
-}
-
 /* Hero Section - Primeira Impressão */
 .hero-yup {
-  background: rgba(30, 41, 59, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(30, 41, 59, 0.82);
   border-radius: 2rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   padding: 3rem 2rem;
@@ -452,7 +379,6 @@ import Icon from '../components/Icon.astro';
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 0 30px rgba(37, 99, 235, 0.6), 0 0 60px rgba(30, 64, 175, 0.4);
-  animation: neonGlow 2s ease-in-out infinite;
 }
 
 .metodologia-grid {
@@ -463,8 +389,7 @@ import Icon from '../components/Icon.astro';
 }
 
 .metodologia-step {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
   border: 2px solid rgba(37, 99, 235, 0.3);
   border-radius: 1.5rem;
   padding: 2.5rem 1.5rem;
@@ -622,8 +547,7 @@ import Icon from '../components/Icon.astro';
 }
 
 .beneficio-card {
-  background: rgba(30, 41, 59, 0.5);
-  backdrop-filter: blur(10px);
+  background: rgba(30, 41, 59, 0.65);
   border-radius: 1.8rem;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -850,8 +774,7 @@ import Icon from '../components/Icon.astro';
 }
 
 .cta-content {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-  backdrop-filter: blur(20px);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.92) 0%, rgba(15, 23, 42, 0.95) 100%);
   border-radius: 2rem;
   padding: 4rem 3rem;
   text-align: center;
@@ -869,9 +792,7 @@ import Icon from '../components/Icon.astro';
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
-  animation: neonPulse 3s ease-in-out infinite;
-  animation-play-state: paused;
+  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.18) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -887,8 +808,6 @@ import Icon from '../components/Icon.astro';
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
   box-shadow: 0 0 30px rgba(245, 158, 11, 0.7), 0 0 60px rgba(249, 115, 22, 0.5);
-  animation: neonGlow 2s ease-in-out infinite;
-  animation-play-state: paused;
 }
 
 .cta-content.revealed {
@@ -896,25 +815,11 @@ import Icon from '../components/Icon.astro';
   transform: translateY(0) scale(1);
 }
 
-.cta-content.revealed::before {
-  animation-play-state: running;
-}
-
-.cta-content.revealed .cta-badge {
-  animation-play-state: running;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .cta-content {
     opacity: 1;
     transform: none;
     transition: none;
-  }
-
-  .cta-content::before,
-  .cta-badge {
-    animation: none;
-    animation-play-state: paused;
   }
 }
 
