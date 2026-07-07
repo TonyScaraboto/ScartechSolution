@@ -1,66 +1,44 @@
 ---
-title: Automação de Processos Financeiros
+title: Site Institucional + Google Ads para Clínica
 publishDate: 2024-06-15 00:00:00
 img: /assets/stock-2.jpg
-img_alt: Gráficos e dashboards financeiros em tela de computador
+img_alt: Site institucional e campanhas Google Ads
 description: |
-  Desenvolvemos um sistema de automação que reduziu em 85% o tempo de processamento
-  de faturas e relatórios financeiros de uma empresa de serviços.
+  Desenvolvemos site institucional e campanhas de Google Ads que aumentaram
+  em 150% os agendamentos online de uma clínica de estética.
 tags:
-  - Automação
-  - RPA
-  - Business Intelligence
+  - Desenvolvimento Web
+  - Google Ads
+  - Sites Institucionais
 ---
 
 ## O Desafio
 
-Uma empresa de consultoria enfrentava um grande gargalo: sua equipe financeira gastava mais de 40 horas por semana processando manualmente faturas, gerando relatórios e fazendo conciliações bancárias. Esse processo manual não só consumia tempo valioso, como também estava sujeito a erros humanos que custavam caro.
+Uma clínica de estética dependia exclusivamente de indicações e Instagram orgânico para captar clientes. Não tinha site profissional e investia em anúncios sem estratégia, gerando cliques caros e poucos agendamentos.
 
-**Principais dores identificadas:**
-- Processamento manual de 200+ faturas mensais
-- Geração de relatórios financeiros levava 8 horas por semana
-- Erros em 15% das conciliações bancárias
-- Falta de visibilidade em tempo real sobre o fluxo de caixa
-- Equipe sobrecarregada com tarefas repetitivas
+**Principais dores:**
+- Ausência de site institucional profissional
+- Campanhas Google Ads mal configuradas
+- Baixa taxa de conversão de visitantes em leads
+- Sem rastreamento de resultados
 
 ## A Solução
 
-Desenvolvemos um sistema completo de automação usando RPA (Robotic Process Automation) integrado com Business Intelligence:
+**1. Site Institucional**
+- Design moderno e responsivo
+- Páginas de serviços otimizadas para SEO
+- Formulário de agendamento integrado com WhatsApp
+- Velocidade de carregamento otimizada
 
-**1. Automação de Processamento de Faturas**
-- Extração automática de dados de PDFs e e-mails
-- Validação e categorização inteligente
-- Lançamento automático no sistema ERP
-- Notificações automáticas para aprovações
+**2. Campanhas Google Ads**
+- Campanhas de pesquisa com palavras-chave locais
+- Remarketing para visitantes do site
+- Landing pages específicas por serviço
+- Pixel de conversão e relatórios semanais
 
-**2. Relatórios Automatizados**
-- Geração automática de relatórios financeiros diários
-- Dashboard em tempo real com KPIs principais
-- Alertas automáticos para anomalias
-- Exportação programada para diferentes formatos
+## Resultados
 
-**3. Conciliação Bancária Inteligente**
-- Integração direta com APIs bancárias
-- Matching automático de transações
-- Identificação de divergências
-- Relatórios de exceções para revisão manual
-
-## Resultados Alcançados
-
-**Métricas de Sucesso:**
-- **85% de redução** no tempo de processamento
-- **99% de precisão** nas conciliações
-- **40 horas/semana** economizadas
-- **ROI em 4 meses** - investimento recuperado rapidamente
-- **100% de satisfação** da equipe financeira
-
-**Impacto no Negócio:**
-A equipe financeira agora dedica o tempo economizado para análises estratégicas e planejamento, ao invés de tarefas operacionais. O CEO relatou: "Transformou completamente nossa operação financeira. Agora temos dados em tempo real e nossa equipe foca no que realmente importa."
-
-## Tecnologias Utilizadas
-
-- **RPA:** UiPath para automação de processos
-- **BI:** Power BI para dashboards e relatórios
-- **Integrações:** APIs REST para conexão com bancos e ERP
-- **Cloud:** Azure para hospedagem e processamento
-- **AI:** Machine Learning para categorização inteligente
+- **150% de aumento** em agendamentos online
+- **-40% no custo por lead** após otimização
+- **Top 3 no Google** para termos locais principais
+- **ROI de 4x** no investimento em anúncios

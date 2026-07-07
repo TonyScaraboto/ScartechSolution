@@ -3,159 +3,182 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
 ---
 
-<BaseLayout>
+<BaseLayout
+  title="Scartech Solution | Sites, E-commerce e Tráfego Pago"
+  description="Desenvolvimento de sites institucionais, e-commerce e gestão de tráfego pago no Google Ads, Facebook e Instagram."
+>
   <div class="main-hero-light">
     <!-- Hero Section - Primeira Impressão -->
     <section class="hero-yup">
-      <img src="/logo2.png" alt="Logo Scartech Solution" class="logo-hero" />
-      <h1 class="hero-title">Transforme processos manuais em <span class="highlight">automação inteligente</span></h1>
-      <p class="empresa-desc">Scartech Solution - Levando sua empresa para o futuro digital</p>
-      <p class="hero-subtitle">Soluções sob medida que aumentam produtividade, reduzem custos e impulsionam resultados. <strong>Comece hoje mesmo sua transformação digital.</strong></p>
-      <div class="hero-trust">
-        <span>✓ 100% satisfação</span>
-        <span>✓ Suporte 24/7</span>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="empresa-desc">Desenvolvimento Web & Tráfego Pago</p>
+          <h1 class="hero-title">Sites que convertem e anúncios que <span class="highlight">geram vendas</span></h1>
+          <p class="hero-subtitle">Criamos sites institucionais, lojas virtuais e campanhas de tráfego pago no Google, Facebook e Instagram. <strong>Presença digital completa para o seu negócio crescer.</strong></p>
+          <div class="hero-actions">
+            <a href="https://wa.me/5513991836523?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20sites%20e%20tráfego%20pago!" class="whatsapp-btn">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Fale com um Especialista
+            </a>
+            <a href="/services" class="hero-btn-secondary">Conheça os serviços</a>
+          </div>
+          <div class="hero-trust">
+            <span>✓ Sites profissionais</span>
+            <span>✓ Campanhas otimizadas</span>
+            <span>✓ Resultados mensuráveis</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="Dashboard de resultados de marketing digital" class="hero-visual-img" />
+          <div class="hero-badge hero-badge-top">
+            <span class="hero-badge-number">3x</span>
+            <span class="hero-badge-label">ROI médio em campanhas</span>
+          </div>
+          <div class="hero-badge hero-badge-bottom">
+            <span class="hero-badge-number">50+</span>
+            <span class="hero-badge-label">Projetos entregues</span>
+          </div>
+        </div>
       </div>
-      <a href="https://wa.me/5513991836523?text=Olá,%20tomei%20conhecimento%20dos%20serviços%20Web%20pelo%20site%20e%20gostaria%20de%20mais%20informações." class="whatsapp-btn">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Fale com um Especialista
-      </a>
     </section>
 
-    <!-- Metodologia Design Thinking -->
+    <!-- Nosso Processo -->
     <section class="metodologia-section">
-      <div class="metodologia-badge">Nossa Metodologia</div>
-      <h2 class="section-title">Design Thinking em Ação</h2>
-      <p class="section-subtitle">Processo comprovado que garante resultados reais</p>
+      <div class="metodologia-badge">Como Trabalhamos</div>
+      <h2 class="section-title">Do site ao anúncio, tudo integrado</h2>
+      <p class="section-subtitle">Processo estruturado para entregar presença digital e campanhas que convertem</p>
       <div class="metodologia-grid">
         <div class="metodologia-step">
           <div class="step-number">01</div>
-          <h3>Empatia</h3>
-          <p>Entendemos profundamente suas dores e desafios</p>
+          <h3>Diagnóstico</h3>
+          <p>Analisamos seu negócio, concorrência e objetivos de venda</p>
         </div>
         <div class="metodologia-step">
           <div class="step-number">02</div>
-          <h3>Definição</h3>
-          <p>Identificamos o problema exato a ser resolvido</p>
+          <h3>Estratégia</h3>
+          <p>Definimos o site ideal e o plano de tráfego pago</p>
         </div>
         <div class="metodologia-step">
           <div class="step-number">03</div>
-          <h3>Ideação</h3>
-          <p>Criamos soluções inovadoras e personalizadas</p>
+          <h3>Desenvolvimento</h3>
+          <p>Criamos seu site ou e-commerce com foco em conversão</p>
         </div>
         <div class="metodologia-step">
           <div class="step-number">04</div>
-          <h3>Prototipagem</h3>
-          <p>Desenvolvemos versões testáveis rapidamente</p>
+          <h3>Campanhas</h3>
+          <p>Configuramos e lançamos anúncios no Google, Facebook e Instagram</p>
         </div>
         <div class="metodologia-step">
           <div class="step-number">05</div>
-          <h3>Teste</h3>
-          <p>Validamos com dados reais e ajustamos</p>
+          <h3>Otimização</h3>
+          <p>Monitoramos resultados e ajustamos para maximizar o retorno</p>
         </div>
       </div>
     </section>
 
-    <!-- Problemas que Resolvemos - Empatia -->
+    <!-- Problemas que Resolvemos -->
     <section class="problems-section">
       <h2 class="section-title">Você enfrenta esses desafios?</h2>
-      <p class="section-subtitle">Identificamos as principais dores que impedem seu crescimento</p>
+      <p class="section-subtitle">Problemas comuns que impedem empresas de vender online</p>
       <div class="problems-grid">
         <div class="problem-card">
           <div class="problem-icon"><Icon icon="pencil-line" size="2.5rem" color="#ef4444" /></div>
-          <h3>Processos Manuais Repetitivos</h3>
-          <p>Sua equipe perde horas em tarefas operacionais que poderiam ser automatizadas, reduzindo a capacidade de foco em atividades estratégicas.</p>
-          <div class="problem-impact"><strong>Impacto:</strong> Até 40% de perda em produtividade</div>
+          <h3>Site Desatualizado ou Inexistente</h3>
+          <p>Sem presença digital profissional, clientes não encontram sua empresa e acabam indo para a concorrência.</p>
+          <div class="problem-impact"><strong>Impacto:</strong> Perda de credibilidade e oportunidades de venda</div>
         </div>
         <div class="problem-card">
           <div class="problem-icon"><Icon icon="strategy" size="2.5rem" color="#ef4444" /></div>
-          <h3>Falta de Integração Entre Sistemas</h3>
-          <p>Dados fragmentados em múltiplas plataformas causam retrabalho, erros e dificuldade na tomada de decisões baseadas em informações.</p>
-          <div class="problem-impact"><strong>Impacto:</strong> 60% de retrabalho e perda de dados</div>
+          <h3>Anúncios Sem Retorno</h3>
+          <p>Investimento em tráfego pago sem estratégia, segmentação ou acompanhamento gera prejuízo em vez de clientes.</p>
+          <div class="problem-impact"><strong>Impacto:</strong> Dinheiro jogado fora em campanhas mal configuradas</div>
         </div>
         <div class="problem-card">
           <div class="problem-icon"><Icon icon="code" size="2.5rem" color="#ef4444" /></div>
-          <h3>Custos Operacionais Elevados</h3>
-          <p>Processos ineficientes e falta de automação geram despesas desnecessárias, aumentando significativamente os custos mensais.</p>
-          <div class="problem-impact"><strong>Impacto:</strong> Até 35% de gastos evitáveis</div>
+          <h3>Loja Virtual Que Não Vende</h3>
+          <p>E-commerce mal estruturado, sem checkout otimizado ou integração com meios de pagamento, frustra compradores.</p>
+          <div class="problem-impact"><strong>Impacto:</strong> Carrinhos abandonados e vendas perdidas</div>
         </div>
       </div>
     </section>
 
-    <!-- Benefícios - Solução -->
-    <section class="beneficios-section">
-      <h2 class="section-title">Como transformamos seu negócio</h2>
-      <div class="beneficios-grid">
-        <div class="beneficio-card">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Automação" class="beneficio-img" />
-          <div class="badge">+80% Eficiência</div>
-          <h3>Automação Inteligente</h3>
-          <p>Elimine tarefas repetitivas e libere sua equipe para o que realmente importa: crescer seu negócio.</p>
-        </div>
-        <div class="beneficio-card">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Integração" class="beneficio-img" />
-          <div class="badge">100% Integrado</div>
-          <h3>Sistemas Conectados</h3>
-          <p>Todos os seus dados e ferramentas trabalhando juntos em perfeita sincronia.</p>
-        </div>
-        <div class="beneficio-card">
-          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="Resultados" class="beneficio-img" />
-          <div class="badge">ROI Garantido</div>
-          <h3>Resultados Mensuráveis</h3>
-          <p>Aumento real em vendas, produtividade e satisfação. Dados que comprovam o impacto.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Serviços - Portfolio -->
+    <!-- Serviços -->
     <section class="servicos-section">
-      <h2 class="section-title">Soluções que desenvolvemos para você</h2>
-      <p class="section-subtitle">Do planejamento ao lançamento, cuidamos de cada detalhe</p>
+      <h2 class="section-title">Nossos serviços</h2>
+      <p class="section-subtitle">Desenvolvimento web e tráfego pago para o seu negócio decolar</p>
       <div class="servicos-grid">
-        <div class="servico-card">
-          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80" alt="Sites" class="servico-img" />
-          <h3>Sites Institucionais</h3>
-          <p>Presença digital profissional que transmite credibilidade e atrai clientes.</p>
-          <ul class="features-list">
-            <li>✓ Design responsivo</li>
-            <li>✓ SEO otimizado</li>
-            <li>✓ Performance 4K</li>
-          </ul>
+        <div class="servico-card" style="--card-bg: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80')">
+          <div class="servico-card-overlay"></div>
+          <div class="servico-card-content">
+            <h3>Sites Institucionais</h3>
+            <p>Presença digital profissional que transmite credibilidade e atrai clientes.</p>
+            <ul class="features-list">
+              <li>✓ Design responsivo</li>
+              <li>✓ SEO otimizado</li>
+              <li>✓ Alta performance</li>
+            </ul>
+          </div>
         </div>
-        <div class="servico-card featured">
+        <div class="servico-card featured" style="--card-bg: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80')">
           <div class="popular-badge">Mais Popular</div>
-          <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=800&q=80" alt="Landing Page" class="servico-img" />
-          <h3>Landing Pages</h3>
-          <p>Páginas de alta conversão que transformam visitantes em clientes.</p>
-          <ul class="features-list">
-            <li>✓ Foco em conversão</li>
-            <li>✓ A/B Testing</li>
-            <li>✓ Analytics integrado</li>
-          </ul>
+          <div class="servico-card-overlay"></div>
+          <div class="servico-card-content">
+            <h3>E-commerce</h3>
+            <p>Loja virtual completa para vender seus produtos 24 horas por dia.</p>
+            <ul class="features-list">
+              <li>✓ Catálogo de produtos</li>
+              <li>✓ Pagamentos integrados</li>
+              <li>✓ Painel de gestão</li>
+            </ul>
+          </div>
         </div>
-        <div class="servico-card">
-          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Sistemas" class="servico-img" />
-          <h3>Sistemas Web</h3>
-          <p>Plataformas personalizadas que automatizam seu negócio.</p>
-          <ul class="features-list">
-            <li>✓ 100% Sob medida</li>
-            <li>✓ Cloud native</li>
-            <li>✓ Segurança avançada</li>
-          </ul>
+        <div class="servico-card" style="--card-bg: url('https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=800&q=80')">
+          <div class="servico-card-overlay"></div>
+          <div class="servico-card-content">
+            <h3>Landing Pages</h3>
+            <p>Páginas de alta conversão ideais para campanhas de tráfego pago.</p>
+            <ul class="features-list">
+              <li>✓ Foco em conversão</li>
+              <li>✓ Integração com anúncios</li>
+              <li>✓ Analytics configurado</li>
+            </ul>
+          </div>
         </div>
-        <div class="servico-card">
-          <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=800&q=80" alt="Catálogos" class="servico-img" />
-          <h3>Catálogos Digitais</h3>
-          <p>Mostre seus produtos de forma inovadora e interativa.</p>
+        <div class="servico-card" style="--card-bg: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80')">
+          <div class="servico-card-overlay"></div>
+          <div class="servico-card-content">
+            <h3>Google Ads</h3>
+            <p>Campanhas de pesquisa, display e shopping para aparecer no Google.</p>
+            <ul class="features-list">
+              <li>✓ Palavras-chave estratégicas</li>
+              <li>✓ Remarketing</li>
+              <li>✓ Relatórios de ROI</li>
+            </ul>
+          </div>
         </div>
-        <div class="servico-card">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Cardápios" class="servico-img" />
-          <h3>Cardápios Inteligentes</h3>
-          <p>Solução completa para restaurantes e delivery.</p>
+        <div class="servico-card" style="--card-bg: url('https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&w=800&q=80')">
+          <div class="servico-card-overlay"></div>
+          <div class="servico-card-content">
+            <h3>Facebook & Instagram Ads</h3>
+            <p>Anúncios segmentados nas redes sociais para alcançar seu público ideal.</p>
+            <ul class="features-list">
+              <li>✓ Segmentação avançada</li>
+              <li>✓ Criativos otimizados</li>
+              <li>✓ Pixel e conversões</li>
+            </ul>
+          </div>
         </div>
-        <div class="servico-card">
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-commerce" class="servico-img" />
-          <h3>E-commerce</h3>
-          <p>Loja online completa para vender 24/7.</p>
+        <div class="servico-card" style="--card-bg: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80')">
+          <div class="servico-card-overlay"></div>
+          <div class="servico-card-content">
+            <h3>Gestão de Tráfego Pago</h3>
+            <p>Gerenciamento completo das suas campanhas com otimização contínua.</p>
+            <ul class="features-list">
+              <li>✓ Monitoramento diário</li>
+              <li>✓ Ajustes estratégicos</li>
+              <li>✓ Relatórios mensais</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -190,24 +213,26 @@ import Icon from '../components/Icon.astro';
     <!-- CTA Final - Conversão -->
     <section class="cta-section">
       <div class="cta-content">
-        <div class="cta-badge">Oferta Limitada</div>
-        <h2>Transforme seu negócio em 30 dias</h2>
-        <p class="cta-main">Agende uma <strong>consultoria gratuita</strong> e receba um <strong>diagnóstico completo</strong> da sua presença digital</p>
-        <div class="cta-benefits">
-          <div class="cta-benefit">✓ Análise completa gratuita</div>
-          <div class="cta-benefit">✓ Proposta personalizada</div>
-          <div class="cta-benefit">✓ Sem compromisso</div>
+        <div class="cta-info">
+          <div class="cta-badge">Consultoria Gratuita</div>
+          <h2>Pronto para vender mais online?</h2>
+          <p class="cta-main">Agende uma <strong>consultoria gratuita</strong> e receba um <strong>diagnóstico completo</strong> do seu site e campanhas de tráfego pago.</p>
+          <div class="cta-benefits">
+            <div class="cta-benefit">✓ Análise completa gratuita</div>
+            <div class="cta-benefit">✓ Proposta personalizada</div>
+            <div class="cta-benefit">✓ Sem compromisso</div>
+          </div>
         </div>
-        <div class="cta-buttons">
-          <a href="https://wa.me/5513991836523?text=Olá,%20tomei%20conhecimento%20dos%20serviços%20Web%20pelo%20site%20e%20gostaria%20de%20mais%20informações." class="cta-btn primary">
+        <div class="cta-actions">
+          <a href="https://wa.me/5513991836523?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20sites%20e%20tráfego%20pago!" class="cta-btn primary">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Falar no WhatsApp
           </a>
           <a href="mailto:contatoscartech@gmail.com?subject=Contato%20pelo%20site%20Scartech%20Solution&body=Olá,%0D%0A%0D%0ATomei%20conhecimento%20dos%20serviços%20Web%20pelo%20site%20e%20gostaria%20de%20mais%20informações.%0D%0A%0D%0AAtenciosamente," class="cta-btn secondary email-btn">
             Enviar E-mail
           </a>
+          <p class="cta-guarantee">✓ Resposta em até 2 horas<br />Orçamento sem compromisso</p>
         </div>
-        <p class="cta-guarantee">✓ Resposta em até 2 horas • Orçamento sem compromisso</p>
       </div>
     </section>
   </div>
@@ -221,24 +246,177 @@ import Icon from '../components/Icon.astro';
 
 /* Layout Principal */
 .main-hero-light {
-  background: linear-gradient(135deg, #000000 0%, #0a0a0a 30%, #050505 60%, #000000 100%);
+  background: #f8fafc;
   min-height: 100vh;
   padding: 6rem 1rem 4rem;
   position: relative;
   overflow: hidden;
 }
 
+/* Animações de entrada do hero */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes heroBadgePop {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-content > * {
+  animation: heroFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-content .empresa-desc { animation-delay: 0.1s; }
+.hero-content .hero-title { animation-delay: 0.2s; }
+.hero-content .hero-subtitle { animation-delay: 0.35s; }
+.hero-content .hero-actions { animation-delay: 0.5s; }
+.hero-content .hero-trust { animation-delay: 0.65s; }
+
+.hero-visual {
+  animation: heroFadeRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.hero-badge-top {
+  animation: heroBadgePop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.9s both;
+}
+
+.hero-badge-bottom {
+  animation: heroBadgePop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.1s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content > *,
+  .hero-visual,
+  .hero-badge-top,
+  .hero-badge-bottom {
+    animation: none;
+  }
+}
+
 /* Hero Section - Primeira Impressão */
 .hero-yup {
-  background: rgba(30, 41, 59, 0.82);
-  border-radius: 2rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  padding: 3rem 2rem;
-  max-width: 680px;
+  background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+  padding: 4rem 3.5rem;
+  max-width: 1200px;
   margin: 0 auto 5rem;
-  text-align: center;
-  border: 1px solid rgba(59, 130, 246, 0.3);
   animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+  .hero-btn-secondary:hover {
+    background: #ffffff;
+    color: #1e3a8a;
+    transform: translateY(-2px);
+  }
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.hero-visual-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-badge {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 0.9rem;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 12px 32px rgba(2, 6, 23, 0.35);
+}
+
+.hero-badge-top {
+  top: 1.25rem;
+  right: -1rem;
+}
+
+.hero-badge-bottom {
+  bottom: 1.25rem;
+  left: -1rem;
+}
+
+.hero-badge-number {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #1e40af;
+  line-height: 1;
+}
+
+.hero-badge-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  max-width: 9rem;
+  line-height: 1.3;
 }
 
 @keyframes fadeInUp {
@@ -252,24 +430,6 @@ import Icon from '../components/Icon.astro';
   }
 }
 
-.logo-hero {
-  width: 110px;
-  height: 110px;
-  border-radius: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
-  object-fit: contain;
-  background: rgba(30, 41, 59, 0.8);
-  padding: 0.5rem;
-}
-
-@media (hover: hover) {
-  .logo-hero:hover {
-    transform: scale(1.08) rotate(3deg);
-  }
-}
-
 .hero-title {
   color: #ffffff;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
@@ -280,52 +440,45 @@ import Icon from '../components/Icon.astro';
 }
 
 .highlight {
-  background: linear-gradient(120deg, #2563eb 0%, #3b82f6 100%);
+  background: linear-gradient(120deg, #60a5fa 0%, #93c5fd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .empresa-desc {
-  color: #2563eb;
-  font-size: 1.1rem;
+  color: #93c5fd;
   font-weight: 700;
   margin-bottom: 0.8rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   font-size: 0.85rem;
 }
 
 .hero-subtitle {
-  color: #475569;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #cbd5e1;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.6;
-  margin-bottom: 1.5rem;
-  max-width: 540px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 2rem;
+  max-width: 560px;
 }
 
 .hero-subtitle strong {
-  color: #2563eb;
-  font-weight: 800;
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .hero-trust {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
+  gap: 1.25rem 1.75rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: rgba(37, 99, 235, 0.05);
-  border-radius: 1rem;
-  border: 1px solid rgba(37, 99, 235, 0.1);
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .hero-trust span {
-  color: #059669;
-  font-weight: 700;
+  color: #e2e8f0;
+  font-weight: 600;
   font-size: 0.9rem;
   white-space: nowrap;
 }
@@ -337,13 +490,12 @@ import Icon from '../components/Icon.astro';
   background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
   color: #fff;
   font-weight: 700;
-  font-size: 1.1rem;
-  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  padding: 1rem 2rem;
   border-radius: 3rem;
   text-decoration: none;
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3), 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 @media (hover: hover) {
@@ -358,7 +510,7 @@ import Icon from '../components/Icon.astro';
   transform: translateY(-1px) scale(0.98);
 }
 
-/* Metodologia Design Thinking */
+/* Processo de Trabalho */
 .metodologia-section {
   max-width: 1400px;
   margin: 5rem auto;
@@ -369,16 +521,16 @@ import Icon from '../components/Icon.astro';
 
 .metodologia-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-  color: white;
+  background: #dbeafe;
+  color: #1e40af;
   padding: 0.6rem 1.5rem;
   border-radius: 2rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 0 30px rgba(37, 99, 235, 0.6), 0 0 60px rgba(30, 64, 175, 0.4);
+  letter-spacing: 1.5px;
+  border: 1px solid #bfdbfe;
 }
 
 .metodologia-grid {
@@ -389,65 +541,45 @@ import Icon from '../components/Icon.astro';
 }
 
 .metodologia-step {
-  background: rgba(255, 255, 255, 0.08);
-  border: 2px solid rgba(37, 99, 235, 0.3);
-  border-radius: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
   padding: 2.5rem 1.5rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
-}
-
-.metodologia-step::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(135deg, #2563eb, #1e40af, #0ea5e9);
-  border-radius: 1.5rem;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: -1;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
 @media (hover: hover) {
-  .metodologia-step:hover::before {
-    opacity: 1;
-  }
-
   .metodologia-step:hover {
-    transform: translateY(-10px) scale(1.05);
-    border-color: transparent;
-    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.6), 0 0 80px rgba(30, 64, 175, 0.5);
+    transform: translateY(-6px);
+    border-color: #93c5fd;
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.12);
   }
 }
 
 .step-number {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1rem;
-  text-shadow: 0 0 40px rgba(37, 99, 235, 0.8);
-  filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.6));
 }
 
 .metodologia-step h3 {
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 800;
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 700;
   margin-bottom: 0.8rem;
-  text-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
 }
 
 .metodologia-step p {
-  color: #f9a8d4;
+  color: #64748b;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 /* Seção de Problemas - Empatia */
@@ -458,24 +590,22 @@ import Icon from '../components/Icon.astro';
 }
 
 .section-title {
-  color: #ffffff;
-  font-size: clamp(2rem, 4vw, 3rem);
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 800;
   text-align: center;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
-  text-shadow: 0 0 20px rgba(59, 130, 246, 0.9), 0 0 40px rgba(96, 165, 250, 0.7), 0 0 60px rgba(147, 197, 253, 0.5);
 }
 
 .section-subtitle {
-  color: #f9a8d4;
-  font-size: 1.2rem;
+  color: #64748b;
+  font-size: 1.15rem;
   text-align: center;
   margin-bottom: 3rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 0 0 10px rgba(249, 168, 212, 0.4);
 }
 
 .problems-grid {
@@ -486,30 +616,29 @@ import Icon from '../components/Icon.astro';
 }
 
 .problem-card {
-  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
-  border: 2px dashed #fca5a5;
-  border-radius: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
   padding: 2.5rem 2rem;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
 @media (hover: hover) {
   .problem-card:hover {
-    transform: translateY(-8px);
-    border-color: #ef4444;
-    box-shadow: 0 16px 40px rgba(239, 68, 68, 0.3), 0 0 60px rgba(239, 68, 68, 0.2);
+    transform: translateY(-6px);
+    border-color: #fca5a5;
+    box-shadow: 0 16px 40px rgba(239, 68, 68, 0.1);
   }
 }
 
 .problem-icon {
-  font-size: 3.5rem;
   margin-bottom: 1rem;
-  filter: grayscale(20%);
 }
 
 .problem-card h3 {
-  color: #dc2626;
+  color: #0f172a;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
@@ -522,86 +651,14 @@ import Icon from '../components/Icon.astro';
 }
 
 .problem-impact {
-  color: #ef4444;
-  font-weight: 800;
-  font-size: 0.95rem;
-  background: rgba(239, 68, 68, 0.1);
+  color: #b91c1c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: #fef2f2;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  border: 1px solid #fecaca;
   display: inline-block;
-}
-
-/* Benefícios Section */
-.beneficios-section {
-  max-width: 1200px;
-  margin: 5rem auto;
-  padding: 0 1rem;
-}
-
-.beneficios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-  margin-top: 3rem;
-}
-
-.beneficio-card {
-  background: rgba(30, 41, 59, 0.65);
-  border-radius: 1.8rem;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  position: relative;
-}
-
-@media (hover: hover) {
-  .beneficio-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.5), 0 0 80px rgba(30, 64, 175, 0.4);
-    border-color: rgba(37, 99, 235, 0.7);
-  }
-}
-
-.beneficio-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-@media (hover: hover) {
-  .beneficio-card:hover .beneficio-img {
-    transform: scale(1.1);
-  }
-}
-
-.badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-}
-
-.beneficio-card h3 {
-  color: #f8fafc;
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin: 1.5rem 1.5rem 0.8rem;
-}
-
-.beneficio-card p {
-  color: #cbd5e1;
-  line-height: 1.7;
-  margin: 0 1.5rem 1.5rem;
-  font-size: 1.05rem;
 }
 
 /* Serviços Section */
@@ -619,18 +676,50 @@ import Icon from '../components/Icon.astro';
 }
 
 .servico-card {
-  background: linear-gradient(155deg, rgba(17, 24, 39, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(148, 163, 184, 0.28);
   position: relative;
+  min-height: 380px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.servico-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-bg);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
 }
 
 .servico-card.featured {
-  border: 1.5px solid rgba(37, 99, 235, 0.65);
-  box-shadow: 0 14px 40px rgba(37, 99, 235, 0.2);
+  border: 2px solid #2563eb;
+  box-shadow: 0 14px 40px rgba(37, 99, 235, 0.18);
+}
+
+.servico-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.7) 45%,
+    rgba(15, 23, 42, 0.32) 100%
+  );
+  transition: background 0.35s ease;
+}
+
+.servico-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 1.75rem 1.5rem 1.5rem;
 }
 
 .popular-badge {
@@ -650,48 +739,51 @@ import Icon from '../components/Icon.astro';
 
 @media (hover: hover) {
   .servico-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgba(37, 99, 235, 0.4), 0 0 60px rgba(14, 165, 233, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.2);
+    border-color: #93c5fd;
   }
-}
 
-.servico-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
+  .servico-card:hover::before {
+    transform: scale(1.08);
+  }
 
-@media (hover: hover) {
-  .servico-card:hover .servico-img {
-    transform: scale(1.05);
+  .servico-card:hover .servico-card-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(15, 23, 42, 0.92) 0%,
+      rgba(15, 23, 42, 0.62) 50%,
+      rgba(15, 23, 42, 0.28) 100%
+    );
   }
 }
 
 .servico-card h3 {
-  color: #f8fafc;
+  color: #ffffff;
   font-size: 1.4rem;
-  font-weight: 700;
-  margin: 1.5rem 1.5rem 0.8rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.01em;
 }
 
 .servico-card p {
-  color: #cbd5e1;
+  color: #e2e8f0;
   line-height: 1.6;
-  margin: 0 1.5rem 1rem;
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
 }
 
 .features-list {
   list-style: none;
-  padding: 0 1.5rem 1.5rem;
+  padding: 0;
   margin: 0;
 }
 
 .features-list li {
-  color: #e2e8f0;
-  font-weight: 600;
-  padding: 0.4rem 0;
-  font-size: 0.95rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
 }
 
 /* Garantias Section */
@@ -710,76 +802,58 @@ import Icon from '../components/Icon.astro';
 
 
 .garantia-card {
-  background: linear-gradient(155deg, rgba(17, 24, 39, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
-  border-radius: 1.5rem;
+  background: #ffffff;
+  border-radius: 1.25rem;
   padding: 2.5rem 2rem;
   text-align: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
-}
-
-.garantia-card::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.65), rgba(16, 185, 129, 0.55));
-  border-radius: 1.5rem;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 0.4s ease;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
 @media (hover: hover) {
-  .garantia-card:hover::before {
-    opacity: 1;
-  }
-
   .garantia-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    border-color: transparent;
-    box-shadow: 0 20px 60px rgba(110, 231, 183, 0.6), 0 0 80px rgba(52, 211, 153, 0.5);
+    transform: translateY(-6px);
+    border-color: #93c5fd;
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.12);
   }
 }
 
 .garantia-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  color: #22d3ee;
-  filter: drop-shadow(0 0 18px rgba(34, 211, 238, 0.55));
+  margin-bottom: 1.25rem;
 }
 
-
 .garantia-card h3 {
-  color: #e0f2fe;
-  font-size: 1.4rem;
-  font-weight: 800;
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 700;
   margin-bottom: 0.8rem;
-  text-shadow: none;
 }
 
 .garantia-card p {
-  color: #cbd5e1;
+  color: #64748b;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 /* CTA Final */
 .cta-section {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 5rem auto 2rem;
   padding: 0 1rem;
 }
 
 .cta-content {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.92) 0%, rgba(15, 23, 42, 0.95) 100%);
-  border-radius: 2rem;
-  padding: 4rem 3rem;
-  text-align: center;
-  box-shadow: 0 20px 60px rgba(37, 99, 235, 0.4), 0 0 100px rgba(30, 64, 175, 0.3);
-  border: 2px solid rgba(37, 99, 235, 0.5);
+  background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%);
+  border-radius: 1.5rem;
+  padding: 3.5rem 3.5rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -792,22 +866,39 @@ import Icon from '../components/Icon.astro';
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.18) 0%, transparent 70%);
+  background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.25) 0%, transparent 60%);
   pointer-events: none;
+}
+
+.cta-info {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  padding: 2rem;
 }
 
 .cta-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
-  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  color: #93c5fd;
   padding: 0.5rem 1.5rem;
   border-radius: 2rem;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 0 30px rgba(245, 158, 11, 0.7), 0 0 60px rgba(249, 115, 22, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .cta-content.revealed {
@@ -824,73 +915,51 @@ import Icon from '../components/Icon.astro';
 }
 
 .cta-content h2 {
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 900;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
-  text-shadow: 0 0 20px rgba(59, 130, 246, 0.9), 0 0 40px rgba(96, 165, 250, 0.7);
   position: relative;
   z-index: 1;
 }
 
 .cta-main {
-  color: #f9a8d4;
-  font-size: 1.2rem;
+  color: #cbd5e1;
+  font-size: 1.15rem;
   line-height: 1.6;
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 1.75rem;
 }
 
 .cta-main strong {
   color: #ffffff;
-  text-shadow: 0 0 20px rgba(37, 99, 235, 0.8);
 }
 
 .cta-benefits {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
-  position: relative;
-  z-index: 1;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 .cta-benefit {
   color: #6ee7b7;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
-  text-shadow: 0 0 15px rgba(110, 231, 183, 0.6);
-}
-
-.cta-content > p {
-  color: #64748b;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
 
 .cta-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   font-weight: 700;
-  font-size: 1.1rem;
-  padding: 1rem 2.5rem;
+  font-size: 1.05rem;
+  padding: 1rem 2rem;
   border-radius: 3rem;
   text-decoration: none;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  width: 100%;
 }
 
 .cta-btn.primary {
@@ -900,9 +969,9 @@ import Icon from '../components/Icon.astro';
 }
 
 .cta-btn.secondary {
-  background: rgba(30, 41, 59, 0.8);
-  color: #93c5fd;
-  border-color: #3b82f6;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 @media (hover: hover) {
@@ -912,21 +981,47 @@ import Icon from '../components/Icon.astro';
   }
 
   .cta-btn.secondary:hover {
-    background: #2563eb;
-    color: #ffffff;
+    background: #ffffff;
+    color: #1e3a8a;
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
   }
 }
 
 .cta-guarantee {
-  color: #059669;
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-top: 1.5rem;
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 0.88rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  line-height: 1.6;
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-visual-img {
+    height: 320px;
+  }
+
+  .hero-badge-top {
+    right: 0.75rem;
+  }
+
+  .hero-badge-bottom {
+    left: 0.75rem;
+  }
+
+  .cta-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .main-hero-light {
     padding: 12rem 1rem 3rem;
@@ -934,6 +1029,16 @@ import Icon from '../components/Icon.astro';
 
   .hero-yup {
     padding: 2rem 1.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions a {
+    justify-content: center;
+    text-align: center;
   }
 
   .hero-trust {
@@ -946,7 +1051,6 @@ import Icon from '../components/Icon.astro';
   }
 
   .problems-grid,
-  .beneficios-grid,
   .servicos-grid,
   .garantias-grid {
     grid-template-columns: 1fr;
@@ -964,25 +1068,17 @@ import Icon from '../components/Icon.astro';
     font-size: 1.2rem;
   }
 
+  .servico-card {
+    min-height: 340px;
+  }
+
   .cta-content {
     padding: 2.5rem 1.5rem;
     border-radius: 1.5rem;
   }
-  
-  .cta-benefits {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: stretch;
-  }
 
-  .cta-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .cta-btn {
-    width: 100%;
-    justify-content: center;
+  .cta-actions {
+    padding: 1.5rem;
   }
 
   .section-title {
@@ -1015,7 +1111,6 @@ import Icon from '../components/Icon.astro';
 /* Animações escalonadas para cards */
 .metodologia-step,
 .problem-card,
-.beneficio-card,
 .servico-card,
 .garantia-card {
   opacity: 0;
@@ -1026,7 +1121,6 @@ import Icon from '../components/Icon.astro';
 
 .metodologia-step.revealed,
 .problem-card.revealed,
-.beneficio-card.revealed,
 .servico-card.revealed,
 .garantia-card.revealed {
   opacity: 1;
@@ -1043,10 +1137,6 @@ import Icon from '../components/Icon.astro';
 .problem-card:nth-child(1).revealed { transition-delay: 0.1s; }
 .problem-card:nth-child(2).revealed { transition-delay: 0.2s; }
 .problem-card:nth-child(3).revealed { transition-delay: 0.3s; }
-
-.beneficio-card:nth-child(1).revealed { transition-delay: 0.15s; }
-.beneficio-card:nth-child(2).revealed { transition-delay: 0.3s; }
-.beneficio-card:nth-child(3).revealed { transition-delay: 0.45s; }
 
 .servico-card:nth-child(1).revealed { transition-delay: 0.1s; }
 .servico-card:nth-child(2).revealed { transition-delay: 0.15s; }
@@ -1092,7 +1182,7 @@ import Icon from '../components/Icon.astro';
     observer.disconnect();
 
     const elements = document.querySelectorAll(
-      '.section-title, .section-subtitle, .metodologia-step, .problem-card, .beneficio-card, .servico-card, .garantia-card, .metodologia-badge, .cta-content'
+      '.section-title, .section-subtitle, .metodologia-step, .problem-card, .servico-card, .garantia-card, .metodologia-badge, .cta-content'
     );
 
     elements.forEach((element) => {
