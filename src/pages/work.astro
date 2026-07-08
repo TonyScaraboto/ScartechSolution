@@ -46,53 +46,90 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			<div class="filter-bar">
 				<button class="filter-btn active" data-filter="todos">Todos</button>
 				<button class="filter-btn" data-filter="sites">Sites Institucionais</button>
+				<button class="filter-btn" data-filter="ecommerce">Loja Virtual</button>
 				<button class="filter-btn" data-filter="landing">Landing Pages</button>
 				<button class="filter-btn" data-filter="sistemas">Sistemas Web</button>
 			</div>
 
 			<div class="projects-grid">
 				<div class="project-card" data-category="sites">
-					<div class="project-img-wrap">
-						<img src="https://raw.githubusercontent.com/TonyScaraboto/GM-Eletrica/main/public/images/services/empresarial-servico.jpg" alt="Site GM Elétrica" class="project-img" loading="lazy" />
+					<div class="mockup-scene">
+						<div class="mockup-desktop">
+							<div class="mockup-browser-bar"><span></span><span></span><span></span></div>
+							<img src="/assets/portfolio/gm-eletrica-desktop.png" alt="Site GM Elétrica em desktop" loading="lazy" />
+						</div>
+						<div class="mockup-phone">
+							<img src="/assets/portfolio/gm-eletrica-mobile.png" alt="Site GM Elétrica em celular" loading="lazy" />
+						</div>
 					</div>
 					<div class="project-info">
 						<span class="project-tag">Site Institucional</span>
 						<h3>GM Elétrica</h3>
-						<p>Site institucional para empresa de serviços elétricos residenciais, empresariais e industriais, com catálogo de serviços e contato direto via WhatsApp</p>
-						<a class="project-link" href="https://gmeletrica.vercel.app" target="_blank" rel="noopener">Ver site no ar →</a>
+						<p>Site institucional para empresa de serviços elétricos residenciais, empresariais e industriais, com catálogo de serviços e contato via WhatsApp</p>
 					</div>
 				</div>
 				<div class="project-card" data-category="sites">
-					<div class="project-img-wrap">
-						<img src="https://raw.githubusercontent.com/TonyScaraboto/lele_estudio_automotiva-/main/public/images/hero-fachada.jpeg" alt="Site Lelê Estúdio Automotivo" class="project-img" loading="lazy" />
+					<div class="mockup-scene">
+						<div class="mockup-desktop">
+							<div class="mockup-browser-bar"><span></span><span></span><span></span></div>
+							<img src="/assets/portfolio/lele-estudio-desktop.png" alt="Site Lelê Estúdio Automotivo em desktop" loading="lazy" />
+						</div>
+						<div class="mockup-phone">
+							<img src="/assets/portfolio/lele-estudio-mobile.png" alt="Site Lelê Estúdio Automotivo em celular" loading="lazy" />
+						</div>
 					</div>
 					<div class="project-info">
 						<span class="project-tag">Site Institucional</span>
 						<h3>Lelê Estúdio Automotivo</h3>
-						<p>Site institucional para estúdio de estética automotiva, com galeria de serviços de lavagem, pintura e detalhamento de carros e motos</p>
-						<a class="project-link" href="https://tonyscaraboto.github.io/lele_estudio_automotiva-/" target="_blank" rel="noopener">Ver site no ar →</a>
+						<p>Site institucional para estúdio de estética automotiva, com serviços e valores de lavagem e detalhamento de carros e motos</p>
+					</div>
+				</div>
+				<div class="project-card" data-category="ecommerce">
+					<div class="mockup-scene">
+						<div class="mockup-desktop">
+							<div class="mockup-browser-bar"><span></span><span></span><span></span></div>
+							<img src="/assets/portfolio/ecommerce-desktop.png" alt="Loja virtual ACME Store em desktop" loading="lazy" />
+						</div>
+						<div class="mockup-phone">
+							<img src="/assets/portfolio/ecommerce-mobile.png" alt="Loja virtual ACME Store em celular" loading="lazy" />
+						</div>
+					</div>
+					<div class="project-info">
+						<span class="project-tag tag-ecommerce">Loja Virtual</span>
+						<h3>ACME Store</h3>
+						<p>Loja virtual completa com catálogo de produtos, carrinho de compras, busca e checkout integrado, pronta para campanhas de tráfego pago</p>
 					</div>
 				</div>
 				<div class="project-card" data-category="landing">
-					<div class="project-img-wrap">
-						<img src="https://raw.githubusercontent.com/TonyScaraboto/maxpower/main/public/images/hero-video.jpg" alt="Site MaxPower" class="project-img" loading="lazy" />
+					<div class="mockup-scene">
+						<div class="mockup-desktop">
+							<div class="mockup-browser-bar"><span></span><span></span><span></span></div>
+							<img src="/assets/portfolio/maxpower-desktop.png" alt="Site MaxPower em desktop" loading="lazy" />
+						</div>
+						<div class="mockup-phone">
+							<img src="/assets/portfolio/maxpower-mobile.png" alt="Site MaxPower em celular" loading="lazy" />
+						</div>
 					</div>
 					<div class="project-info">
 						<span class="project-tag tag-landing">Landing Page Internacional</span>
 						<h3>MaxPower</h3>
 						<p>Landing page em inglês para indústria de aquecedores e isolamento térmico, com catálogo de produtos e captação de leads no mercado americano</p>
-						<a class="project-link" href="https://maxpowerindustrialheaters.com/" target="_blank" rel="noopener">Ver site no ar →</a>
 					</div>
 				</div>
 				<div class="project-card" data-category="sistemas">
-					<div class="project-img-wrap">
-						<img src="/assets/scartech-manager.png" alt="Sistema ScarTech Manager" class="project-img" loading="lazy" />
+					<div class="mockup-scene">
+						<div class="mockup-desktop">
+							<div class="mockup-browser-bar"><span></span><span></span><span></span></div>
+							<img src="/assets/portfolio/scartech-manager-desktop.png" alt="Sistema ScarTech Manager em desktop" loading="lazy" />
+						</div>
+						<div class="mockup-phone">
+							<img src="/assets/portfolio/scartech-manager-mobile.png" alt="Sistema ScarTech Manager em celular" loading="lazy" />
+						</div>
 					</div>
 					<div class="project-info">
 						<span class="project-tag tag-sistema">Sistema Web</span>
 						<h3>ScarTech Manager</h3>
 						<p>Sistema completo de gestão para assistências técnicas, com painel administrativo, controle de ordens de serviço e área de login para clientes</p>
-						<a class="project-link" href="https://www.scartechmanager.com.br/" target="_blank" rel="noopener">Ver sistema no ar →</a>
 					</div>
 				</div>
 			</div>
@@ -274,20 +311,81 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	display: none;
 }
 
-.project-img-wrap {
+/* Cena do mockup (desktop + celular) */
+.mockup-scene {
+	position: relative;
+	background: linear-gradient(145deg, #eef2f7 0%, #e2e8f0 100%);
+	padding: 2.5rem 1.5rem 0 5.5rem;
+	height: 300px;
 	overflow: hidden;
-	height: 220px;
 }
 
-.project-img {
-	width: 100%;
+.mockup-desktop {
+	background: #ffffff;
+	border-radius: 0.6rem 0.6rem 0 0;
+	box-shadow: 0 18px 40px rgba(15, 23, 42, 0.22);
+	overflow: hidden;
 	height: 100%;
-	object-fit: cover;
 	transition: transform 0.4s ease;
 }
 
-.project-card:hover .project-img {
-	transform: scale(1.06);
+.mockup-browser-bar {
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+	background: #f1f5f9;
+	border-bottom: 1px solid #e2e8f0;
+	padding: 0.45rem 0.7rem;
+}
+
+.mockup-browser-bar span {
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: #cbd5e1;
+}
+
+.mockup-browser-bar span:nth-child(1) { background: #fca5a5; }
+.mockup-browser-bar span:nth-child(2) { background: #fcd34d; }
+.mockup-browser-bar span:nth-child(3) { background: #86efac; }
+
+.mockup-desktop img {
+	width: 100%;
+	height: calc(100% - 24px);
+	object-fit: cover;
+	object-position: top;
+	display: block;
+}
+
+.mockup-phone {
+	position: absolute;
+	left: 1.25rem;
+	bottom: -1px;
+	width: 92px;
+	border: 4px solid #0f172a;
+	border-bottom: none;
+	border-radius: 1.1rem 1.1rem 0 0;
+	overflow: hidden;
+	box-shadow: 0 14px 30px rgba(15, 23, 42, 0.3);
+	background: #0f172a;
+	transition: transform 0.4s ease;
+}
+
+.mockup-phone img {
+	width: 100%;
+	height: 175px;
+	object-fit: cover;
+	object-position: top;
+	display: block;
+	border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.project-card:hover .mockup-desktop {
+	transform: translateY(-6px);
+}
+
+.project-card:hover .mockup-phone {
+	transform: translateY(-4px);
 }
 
 .project-info {
@@ -307,9 +405,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	margin-bottom: 0.9rem;
 }
 
-.project-tag.tag-landing {
+.project-tag.tag-ecommerce {
 	background: #dcfce7;
 	color: #166534;
+}
+
+.project-tag.tag-landing {
+	background: #fae8ff;
+	color: #86198f;
 }
 
 .project-tag.tag-sistema {
@@ -329,21 +432,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	line-height: 1.6;
 }
 
-.project-link {
-	display: inline-block;
-	margin-top: 1rem;
-	color: #1e40af;
-	font-weight: 700;
-	font-size: 0.9rem;
-	text-decoration: none;
-	transition: color 0.2s ease;
-}
-
-.project-link:hover {
-	color: #2563eb;
-	text-decoration: underline;
-}
-
 @media (max-width: 1024px) {
 	.impact-stats {
 		grid-template-columns: repeat(2, 1fr);
@@ -353,7 +441,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 @media (max-width: 768px) {
 	.portfolio-container {
-		padding-top: 12rem;
+		padding-top: 6.5rem;
 	}
 
 	.hero-title {
